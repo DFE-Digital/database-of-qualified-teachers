@@ -2,11 +2,11 @@
 
 The current TRA architecture is as follows:
 
-![test]()
+![TRA Architecture](images/tra-architecture.png)
 
 DQT is set up as follows: 
 
-![img2]()
+![DQT Setup](images/dqt-setup.png)
 
 The DQT has relationships with the following services and systems: 
 
