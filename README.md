@@ -1,2 +1,3 @@
-# teacher-regulation-agency
-general repo for TRA service components as they come into DfE Teacher Services
+# Database of Qualified Teachers
+
+General repo for Database of Qualified Teachers (DQT) documentation and service components.
