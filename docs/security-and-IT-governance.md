@@ -14,7 +14,7 @@ As TRA systems and services have historically been disparate, AtO details are as
 | Date of Authority to operate                |     |
 | Duration of Authority to Operate (security) |     |
 
-## New TRA API
+## New DQT API
 
 | Dates                                       |     |
 | ------------------------------------------- | --- |
