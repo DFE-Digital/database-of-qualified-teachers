@@ -1,6 +1,6 @@
-# TRA technical architecture - As is
+# Technical architecture - as is
 
-The following space highlights the technical architecture of the software solution for the Database of Qualified Teachers (DQT) within the Teaching Regulation Agency. 
+This page documents the existing technical architecture for the Database of Qualified Teachers (DQT).
 
 In line with many other services in Teacher Services we have decided to use [C4](https://c4model.com/) methodology to map out the different layers of the architecture.
 
