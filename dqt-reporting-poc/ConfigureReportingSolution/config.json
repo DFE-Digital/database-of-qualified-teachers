@@ -1,0 +1,10 @@
+{
+  "entities": {
+    "contact": {},
+    "dfeta_country": {},
+    "dfeta_sanction": {},
+    "dfeta_sanctioncode": {},
+    "lead": {},
+    "dfeta_mrapplication": {}
+  }
+}
