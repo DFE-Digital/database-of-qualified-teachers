@@ -1,0 +1,530 @@
+OptionSetName,Option,IsUserLocalizedLabel,LocalizedLabelLanguageCode,LocalizedLabel,GlobalOptionSetName
+blockedprofile,0,0,1033,No,NULL
+blockedprofile,1,0,1033,Yes,NULL
+budgetstatus,0,0,1033,No Committed Budget,NULL
+budgetstatus,1,0,1033,May Buy,NULL
+budgetstatus,2,0,1033,Can Buy,NULL
+budgetstatus,3,0,1033,Will Buy,NULL
+caseorigincode,1,0,1033,Phone,NULL
+caseorigincode,2,0,1033,Email,NULL
+caseorigincode,3,0,1033,Web,NULL
+caseorigincode,2483,0,1033,Facebook,NULL
+caseorigincode,3986,0,1033,Twitter,NULL
+caseorigincode,700610000,0,1033,IoT,NULL
+community,0,0,1033,Other,NULL
+community,1,0,1033,Facebook,NULL
+community,2,0,1033,Twitter,NULL
+confirminterest,0,0,1033,Yes,NULL
+confirminterest,1,0,1033,No,NULL
+decisionmaker,0,0,1033,mark complete,NULL
+decisionmaker,1,0,1033,completed,NULL
+deliveryprioritycode,0,0,1033,Low,NULL
+deliveryprioritycode,1,0,1033,Normal,NULL
+deliveryprioritycode,2,0,1033,High,NULL
+dfeta_agerangefrom,389040000,0,1033,01,NULL
+dfeta_agerangefrom,389040001,0,1033,02,NULL
+dfeta_agerangefrom,389040002,0,1033,03,NULL
+dfeta_agerangefrom,389040003,0,1033,04,NULL
+dfeta_agerangefrom,389040004,0,1033,05,NULL
+dfeta_agerangefrom,389040005,0,1033,06,NULL
+dfeta_agerangefrom,389040006,0,1033,07,NULL
+dfeta_agerangefrom,389040007,0,1033,08,NULL
+dfeta_agerangefrom,389040008,0,1033,09,NULL
+dfeta_agerangefrom,389040009,0,1033,10,NULL
+dfeta_agerangefrom,389040010,0,1033,11,NULL
+dfeta_agerangefrom,389040011,0,1033,12,NULL
+dfeta_agerangefrom,389040012,0,1033,13,NULL
+dfeta_agerangefrom,389040013,0,1033,14,NULL
+dfeta_agerangefrom,389040014,0,1033,15,NULL
+dfeta_agerangefrom,389040015,0,1033,16,NULL
+dfeta_agerangefrom,389040016,0,1033,17,NULL
+dfeta_agerangefrom,389040017,0,1033,18,NULL
+dfeta_agerangefrom,389040018,0,1033,19,NULL
+dfeta_agerangefrom,389040019,0,1033,99,NULL
+dfeta_agerangefrom,389040020,0,1033,Further Education,NULL
+dfeta_agerangefrom,389040021,0,1033,Foundation Stage,NULL
+dfeta_agerangefrom,389040022,0,1033,Key Stage 1,NULL
+dfeta_agerangefrom,389040023,0,1033,Key Stage 2,NULL
+dfeta_agerangefrom,389040024,0,1033,Key Stage 3,NULL
+dfeta_agerangefrom,389040025,0,1033,Key Stage 4,NULL
+dfeta_agerangefrom,389040026,0,1033,Not applicable,NULL
+dfeta_agerangefrom,389040027,0,1033,Other,NULL
+dfeta_agerangefrom,389040028,0,1033,Post 16,NULL
+dfeta_agerangefrom,389040029,0,1033,00,NULL
+dfeta_agerangeto,389040000,0,1033,01,NULL
+dfeta_agerangeto,389040001,0,1033,02,NULL
+dfeta_agerangeto,389040002,0,1033,03,NULL
+dfeta_agerangeto,389040003,0,1033,04,NULL
+dfeta_agerangeto,389040004,0,1033,05,NULL
+dfeta_agerangeto,389040005,0,1033,06,NULL
+dfeta_agerangeto,389040006,0,1033,07,NULL
+dfeta_agerangeto,389040007,0,1033,08,NULL
+dfeta_agerangeto,389040008,0,1033,09,NULL
+dfeta_agerangeto,389040009,0,1033,10,NULL
+dfeta_agerangeto,389040010,0,1033,11,NULL
+dfeta_agerangeto,389040011,0,1033,12,NULL
+dfeta_agerangeto,389040012,0,1033,13,NULL
+dfeta_agerangeto,389040013,0,1033,14,NULL
+dfeta_agerangeto,389040014,0,1033,15,NULL
+dfeta_agerangeto,389040015,0,1033,16,NULL
+dfeta_agerangeto,389040016,0,1033,17,NULL
+dfeta_agerangeto,389040017,0,1033,18,NULL
+dfeta_agerangeto,389040018,0,1033,19,NULL
+dfeta_agerangeto,389040019,0,1033,99,NULL
+dfeta_agerangeto,389040020,0,1033,Further Education,NULL
+dfeta_agerangeto,389040021,0,1033,Foundation Stage,NULL
+dfeta_agerangeto,389040022,0,1033,Key Stage 1,NULL
+dfeta_agerangeto,389040023,0,1033,Key Stage 2,NULL
+dfeta_agerangeto,389040024,0,1033,Key Stage 3,NULL
+dfeta_agerangeto,389040025,0,1033,Key Stage 4,NULL
+dfeta_agerangeto,389040026,0,1033,Not applicable,NULL
+dfeta_agerangeto,389040027,0,1033,Other,NULL
+dfeta_agerangeto,389040028,0,1033,Post 16,NULL
+dfeta_agerangeto,389040029,0,1033,00,NULL
+dfeta_agerangetrainedtoteachfrom,389040000,0,1033,01,NULL
+dfeta_agerangetrainedtoteachfrom,389040001,0,1033,02,NULL
+dfeta_agerangetrainedtoteachfrom,389040002,0,1033,03,NULL
+dfeta_agerangetrainedtoteachfrom,389040003,0,1033,04,NULL
+dfeta_agerangetrainedtoteachfrom,389040004,0,1033,05,NULL
+dfeta_agerangetrainedtoteachfrom,389040005,0,1033,06,NULL
+dfeta_agerangetrainedtoteachfrom,389040006,0,1033,07,NULL
+dfeta_agerangetrainedtoteachfrom,389040007,0,1033,08,NULL
+dfeta_agerangetrainedtoteachfrom,389040008,0,1033,09,NULL
+dfeta_agerangetrainedtoteachfrom,389040009,0,1033,10,NULL
+dfeta_agerangetrainedtoteachfrom,389040010,0,1033,11,NULL
+dfeta_agerangetrainedtoteachfrom,389040011,0,1033,12,NULL
+dfeta_agerangetrainedtoteachfrom,389040012,0,1033,13,NULL
+dfeta_agerangetrainedtoteachfrom,389040013,0,1033,14,NULL
+dfeta_agerangetrainedtoteachfrom,389040014,0,1033,15,NULL
+dfeta_agerangetrainedtoteachfrom,389040015,0,1033,16,NULL
+dfeta_agerangetrainedtoteachfrom,389040016,0,1033,17,NULL
+dfeta_agerangetrainedtoteachfrom,389040017,0,1033,18,NULL
+dfeta_agerangetrainedtoteachfrom,389040018,0,1033,19,NULL
+dfeta_agerangetrainedtoteachfrom,389040019,0,1033,99,NULL
+dfeta_agerangetrainedtoteachfrom,389040020,0,1033,Further Education,NULL
+dfeta_agerangetrainedtoteachfrom,389040021,0,1033,Foundation Stage,NULL
+dfeta_agerangetrainedtoteachfrom,389040022,0,1033,Key Stage 1,NULL
+dfeta_agerangetrainedtoteachfrom,389040023,0,1033,Key Stage 2,NULL
+dfeta_agerangetrainedtoteachfrom,389040024,0,1033,Key Stage 3,NULL
+dfeta_agerangetrainedtoteachfrom,389040025,0,1033,Key Stage 4,NULL
+dfeta_agerangetrainedtoteachfrom,389040026,0,1033,Not applicable,NULL
+dfeta_agerangetrainedtoteachfrom,389040027,0,1033,Other,NULL
+dfeta_agerangetrainedtoteachfrom,389040028,0,1033,Post 16,NULL
+dfeta_agerangetrainedtoteachfrom,389040029,0,1033,00,NULL
+dfeta_agerangetrainedtoteachto,389040000,0,1033,01,NULL
+dfeta_agerangetrainedtoteachto,389040001,0,1033,02,NULL
+dfeta_agerangetrainedtoteachto,389040002,0,1033,03,NULL
+dfeta_agerangetrainedtoteachto,389040003,0,1033,04,NULL
+dfeta_agerangetrainedtoteachto,389040004,0,1033,05,NULL
+dfeta_agerangetrainedtoteachto,389040005,0,1033,06,NULL
+dfeta_agerangetrainedtoteachto,389040006,0,1033,07,NULL
+dfeta_agerangetrainedtoteachto,389040007,0,1033,08,NULL
+dfeta_agerangetrainedtoteachto,389040008,0,1033,09,NULL
+dfeta_agerangetrainedtoteachto,389040009,0,1033,10,NULL
+dfeta_agerangetrainedtoteachto,389040010,0,1033,11,NULL
+dfeta_agerangetrainedtoteachto,389040011,0,1033,12,NULL
+dfeta_agerangetrainedtoteachto,389040012,0,1033,13,NULL
+dfeta_agerangetrainedtoteachto,389040013,0,1033,14,NULL
+dfeta_agerangetrainedtoteachto,389040014,0,1033,15,NULL
+dfeta_agerangetrainedtoteachto,389040015,0,1033,16,NULL
+dfeta_agerangetrainedtoteachto,389040016,0,1033,17,NULL
+dfeta_agerangetrainedtoteachto,389040017,0,1033,18,NULL
+dfeta_agerangetrainedtoteachto,389040018,0,1033,19,NULL
+dfeta_agerangetrainedtoteachto,389040019,0,1033,99,NULL
+dfeta_agerangetrainedtoteachto,389040020,0,1033,Further Education,NULL
+dfeta_agerangetrainedtoteachto,389040021,0,1033,Foundation Stage,NULL
+dfeta_agerangetrainedtoteachto,389040022,0,1033,Key Stage 1,NULL
+dfeta_agerangetrainedtoteachto,389040023,0,1033,Key Stage 2,NULL
+dfeta_agerangetrainedtoteachto,389040024,0,1033,Key Stage 3,NULL
+dfeta_agerangetrainedtoteachto,389040025,0,1033,Key Stage 4,NULL
+dfeta_agerangetrainedtoteachto,389040026,0,1033,Not applicable,NULL
+dfeta_agerangetrainedtoteachto,389040027,0,1033,Other,NULL
+dfeta_agerangetrainedtoteachto,389040028,0,1033,Post 16,NULL
+dfeta_agerangetrainedtoteachto,389040029,0,1033,00,NULL
+dfeta_applicationtype,389040000,0,1033,Employment,NULL
+dfeta_applicationtype,389040001,0,1033,Degree,NULL
+dfeta_applicationtype,389040002,0,1033,Training,NULL
+dfeta_applicationtype,389040003,0,1033,Details,NULL
+dfeta_applicationtype,389040004,0,1033,Others,NULL
+dfeta_classdivision,389040000,0,1033,First class honours,NULL
+dfeta_classdivision,389040001,0,1033,Upper second class honours,NULL
+dfeta_classdivision,389040002,0,1033,Lower second class honours,NULL
+dfeta_classdivision,389040003,0,1033,Undivided second class honours,NULL
+dfeta_classdivision,389040004,0,1033,Third class honours,NULL
+dfeta_classdivision,389040005,0,1033,Fourth class honours,NULL
+dfeta_classdivision,389040006,0,1033,Unclassified honours,NULL
+dfeta_classdivision,389040007,0,1033,Aegrotat (whether to honours or pass),NULL
+dfeta_classdivision,389040008,0,1033,Pass - degree awarded without honours following an honours course,NULL
+dfeta_classdivision,389040009,0,1033,"Ordinary (including divisions of ordinary, if any) degree awarded after following a non-honours course",NULL
+dfeta_classdivision,389040010,0,1033,General Degree - degree awarded after following a non-honours course/degree that was not available to be classified,NULL
+dfeta_classdivision,389040011,0,1033,Distinction,NULL
+dfeta_classdivision,389040012,0,1033,Merit,NULL
+dfeta_classdivision,389040013,0,1033,Pass,NULL
+dfeta_classdivision,389040014,0,1033,Not applicable,NULL
+dfeta_classdivision,389040015,0,1033,Not Known,NULL
+dfeta_classdivision,389040016,0,1033,Higher Degree,NULL
+dfeta_courselengthunit,389040000,0,1033,Days,NULL
+dfeta_courselengthunit,389040001,0,1033,Months,NULL
+dfeta_courselengthunit,389040002,0,1033,Terms,NULL
+dfeta_courselengthunit,389040003,0,1033,Weeks,NULL
+dfeta_courselengthunit,389040004,0,1033,Years,NULL
+dfeta_eea_applicationtype,389040000,0,1033,Establishment,NULL
+dfeta_eea_applicationtype,389040001,0,1033,Temporary Provision,NULL
+dfeta_eea_assessment1,389040000,0,1033,QTS,NULL
+dfeta_eea_assessment1,389040001,0,1033,Further Information,NULL
+dfeta_eea_assessment1,389040002,0,1033,Decline,NULL
+dfeta_eea_assessment1,389040003,0,1033,IMI,NULL
+dfeta_eea_assessment1,389040004,0,1033,Query,NULL
+dfeta_eea_assessment1,389040005,0,1033,Second Assessment Required,NULL
+dfeta_eea_assessment1,389040006,0,1033,Incomplete Action,NULL
+dfeta_eea_assessment1,389040007,0,1033,Partial QTS,NULL
+dfeta_eea_assessment2,389040000,0,1033,QTS,NULL
+dfeta_eea_assessment2,389040001,0,1033,Further Information,NULL
+dfeta_eea_assessment2,389040002,0,1033,Decline,NULL
+dfeta_eea_assessment2,389040003,0,1033,IMI,NULL
+dfeta_eea_assessment2,389040004,0,1033,Query,NULL
+dfeta_eea_assessment2,389040005,0,1033,Second Assessment Required,NULL
+dfeta_eea_assessment2,389040006,0,1033,Incomplete Action,NULL
+dfeta_eea_assessment2,389040007,0,1033,Partial QTS,NULL
+dfeta_eea_eligibility,389040000,0,1033,"You have successfully completed a course of post-secondary higher education of at least three years' duration, as well as the professional training which may be required in addition to that post secondary course.",NULL
+dfeta_eea_eligibility,389040001,0,1033,"In a Member state where post-secondary higher education of at least three years is the normal requirement,  you are recognised and permitted to practise as a qualified school teacher, having undertaken some lesser education and training in such a State (",NULL
+dfeta_eea_eligibility,389040002,0,1033,You are recognised in an EEA state by virtue of qualifications obtained outside of the EEA and have three years' certified professional experience in that state.,NULL
+dfeta_eea_ficontact,389040000,0,1033,Call,NULL
+dfeta_eea_ficontact,389040001,0,1033,Email,NULL
+dfeta_eea_ficontact,389040002,0,1033,Letter,NULL
+dfeta_extensionlengthunit,389040000,0,1033,Days,NULL
+dfeta_extensionlengthunit,389040001,0,1033,Months,NULL
+dfeta_extensionlengthunit,389040002,0,1033,Terms,NULL
+dfeta_extensionlengthunit,389040003,0,1033,Weeks,NULL
+dfeta_extensionlengthunit,389040004,0,1033,Years,NULL
+dfeta_he_classdivision,389040000,0,1033,First class honours,NULL
+dfeta_he_classdivision,389040001,0,1033,Upper second class honours,NULL
+dfeta_he_classdivision,389040002,0,1033,Lower second class honours,NULL
+dfeta_he_classdivision,389040003,0,1033,Undivided second class honours,NULL
+dfeta_he_classdivision,389040004,0,1033,Third class honours,NULL
+dfeta_he_classdivision,389040005,0,1033,Fourth class honours,NULL
+dfeta_he_classdivision,389040006,0,1033,Unclassified honours,NULL
+dfeta_he_classdivision,389040007,0,1033,Aegrotat (whether to honours or pass),NULL
+dfeta_he_classdivision,389040008,0,1033,Pass - degree awarded without honours following an honours course,NULL
+dfeta_he_classdivision,389040009,0,1033,"Ordinary (including divisions of ordinary, if any) degree awarded after following a non-honours course",NULL
+dfeta_he_classdivision,389040010,0,1033,General Degree - degree awarded after following a non-honours course/degree that was not available to be classified,NULL
+dfeta_he_classdivision,389040011,0,1033,Distinction,NULL
+dfeta_he_classdivision,389040012,0,1033,Merit,NULL
+dfeta_he_classdivision,389040013,0,1033,Pass,NULL
+dfeta_he_classdivision,389040014,0,1033,Not applicable,NULL
+dfeta_he_classdivision,389040015,0,1033,Not Known,NULL
+dfeta_he_classdivision,389040016,0,1033,Higher Degree,NULL
+dfeta_he_firstdegreeflag,389040000,0,1033,No,NULL
+dfeta_he_firstdegreeflag,389040001,0,1033,Yes,NULL
+dfeta_inductionexemptionreason,389040000,0,1033,Extended on appeal,NULL
+dfeta_inductionexemptionreason,389040001,0,1033,Successfully completed probationary period in Gibraltar,NULL
+dfeta_inductionexemptionreason,389040002,0,1033,Successfully completed induction in Guernsey,NULL
+dfeta_inductionexemptionreason,389040003,0,1033,Successfully completed induction in Isle Of Man,NULL
+dfeta_inductionexemptionreason,389040004,0,1033,Successfully completed induction in Jersey,NULL
+dfeta_inductionexemptionreason,389040005,0,1033,Successfully completed induction in Northern Ireland,NULL
+dfeta_inductionexemptionreason,389040006,0,1033,Successfully completed induction in Service Children's Education schools in Germany or Cyprus,NULL
+dfeta_inductionexemptionreason,389040007,0,1033,Successfully completed induction in Wales,NULL
+dfeta_inductionexemptionreason,389040008,0,1033,Exempt,NULL
+dfeta_inductionexemptionreason,389040009,0,1033,Exempt - Data Loss/Error Criteria,NULL
+dfeta_inductionexemptionreason,389040010,0,1033,Overseas Trained Teacher,NULL
+dfeta_inductionexemptionreason,389040011,0,1033,Qualified before 07 May 1999,NULL
+dfeta_inductionexemptionreason,389040012,0,1033,Qualified between 07 May 1999 and 01 April 2003. First post was in Wales and lasted a minimum of two terms.,NULL
+dfeta_inductionexemptionreason,389040013,0,1033,Qualified through EEA mutual recognition route,NULL
+dfeta_inductionexemptionreason,389040014,0,1033,Qualified through FE route between 01 Sep 2001 and 01 Sep 2004,NULL
+dfeta_inductionexemptionreason,389040015,0,1033,Qualified through Independent route between 01 Oct 2000 and 01 Sep 2004,NULL
+dfeta_inductionexemptionreason,389040016,0,1033,Registered Teacher (having at least two year's full time teaching experience),NULL
+dfeta_inductionexemptionreason,389040017,0,1033,"Has, or is eligible for, full registration in Scotland",NULL
+dfeta_inductionexemptionreason,389040018,0,1033,Teacher has been awarded QTLS and is exempt provided they maintain their membership with the Society for Education and Training,NULL
+dfeta_inductionprogrammetype,389040000,0,1033,Full Induction Programme,NULL
+dfeta_inductionprogrammetype,389040001,0,1033,Core Induction Programme,NULL
+dfeta_inductionprogrammetype,389040002,0,1033,School-based Induction Programme,NULL
+dfeta_inductionstatus,389040000,0,1033,Exempt,NULL
+dfeta_inductionstatus,389040001,0,1033,Fail,NULL
+dfeta_inductionstatus,389040002,0,1033,Induction Extended,NULL
+dfeta_inductionstatus,389040003,0,1033,Not Yet Completed,NULL
+dfeta_inductionstatus,389040004,0,1033,Pass,NULL
+dfeta_inductionstatus,389040005,0,1033,Passed in Wales,NULL
+dfeta_inductionstatus,389040006,0,1033,In Progress,NULL
+dfeta_inductionstatus,389040007,0,1033,Required to Complete,NULL
+dfeta_inductionstatus,389040008,0,1033,Failed in Wales,NULL
+dfeta_interface,389040000,0,1033,HESA Import,NULL
+dfeta_interface,389040001,0,1033,Appropriate Body Import,NULL
+dfeta_interface,389040002,0,1033,Capita Import,NULL
+dfeta_interface,389040003,0,1033,Capita Export New,NULL
+dfeta_interface,389040004,0,1033,Capita Export Amend,NULL
+dfeta_interface,389040005,0,1033,Edubase,NULL
+dfeta_interface,389040006,0,1033,Edubase Links,NULL
+dfeta_interface,389040007,0,1033,DMS Import,NULL
+dfeta_interface,389040008,0,1033,DMS Export TRN,NULL
+dfeta_interface,389040009,0,1033,DMS Export QTS Date,NULL
+dfeta_interface,389040010,0,1033,Training Provider Import,NULL
+dfeta_interface,389040011,0,1033,GTC Wales Import,NULL
+dfeta_interface,389040012,0,1033,HESA Export,NULL
+dfeta_interface,389040013,0,1033,ITTPUpdate,NULL
+dfeta_interface,389040014,0,1033,DMS Import TTR1,NULL
+dfeta_interface,389040015,0,1033,DMS Import TTR4\TTR5,NULL
+dfeta_interface,389040016,0,1033,NPQ Import,NULL
+dfeta_interface,389040017,0,1033,NPQ Export,NULL
+dfeta_ittqualificationaim,389040000,0,1033,Professional status only,NULL
+dfeta_ittqualificationaim,389040001,0,1033,Professional status and academic award,NULL
+dfeta_ittqualificationaim,389040002,0,1033,Professional status by assessment only,NULL
+dfeta_ittqualificationaim,389040003,0,1033,Academic award only,NULL
+dfeta_newtitle,389040000,0,1033,Baron,NULL
+dfeta_newtitle,389040001,0,1033,Baroness,NULL
+dfeta_newtitle,389040002,0,1033,Canon,NULL
+dfeta_newtitle,389040003,0,1033,Captain,NULL
+dfeta_newtitle,389040004,0,1033,Dame,NULL
+dfeta_newtitle,389040005,0,1033,Dr.,NULL
+dfeta_newtitle,389040006,0,1033,Earl,NULL
+dfeta_newtitle,389040007,0,1033,Father,NULL
+dfeta_newtitle,389040008,0,1033,Lady,NULL
+dfeta_newtitle,389040009,0,1033,Lord,NULL
+dfeta_newtitle,389040010,0,1033,Lt.,NULL
+dfeta_newtitle,389040011,0,1033,Major,NULL
+dfeta_newtitle,389040012,0,1033,Miss,NULL
+dfeta_newtitle,389040013,0,1033,Mr.,NULL
+dfeta_newtitle,389040014,0,1033,Mrs.,NULL
+dfeta_newtitle,389040015,0,1033,Ms.,NULL
+dfeta_newtitle,389040016,0,1033,Pastor,NULL
+dfeta_newtitle,389040017,0,1033,Prof,NULL
+dfeta_newtitle,389040018,0,1033,Rabbi,NULL
+dfeta_newtitle,389040019,0,1033,Rev,NULL
+dfeta_newtitle,389040020,0,1033,Rt Hon,NULL
+dfeta_newtitle,389040021,0,1033,Sir,NULL
+dfeta_newtitle,389040022,0,1033,Sister,NULL
+dfeta_newtitle,389040023,0,1033,Mx.,NULL
+dfeta_ni_inductionstatusdecision,389040000,0,1033,Exempt - Fully qualified in NI,NULL
+dfeta_ni_inductionstatusdecision,389040001,0,1033,Exempt - Qualified pre 07/05/1999,NULL
+dfeta_outcome,389040000,0,1033,Allowed,NULL
+dfeta_outcome,389040001,0,1033,Dismissed,NULL
+dfeta_outcome,389040002,0,1033,Extension,NULL
+dfeta_outcome,389040003,0,1033,Substitute Extension period,NULL
+dfeta_outcome,389040004,0,1033,Extension Appeal Dismissed,NULL
+dfeta_outcome,389040005,0,1033,Withdrawn Appeal,NULL
+dfeta_programmetype,389040000,0,1033,Core,NULL
+dfeta_programmetype,389040001,0,1033,HEI,NULL
+dfeta_programmetype,389040002,0,1033,School Direct training programme (Self funded),NULL
+dfeta_programmetype,389040003,0,1033,School Direct training programme (Salaried),NULL
+dfeta_programmetype,389040004,0,1033,School Direct training programme,NULL
+dfeta_programmetype,389040005,0,1033,Teach First Programme (CC),NULL
+dfeta_programmetype,389040006,0,1033,Teach First Programme,NULL
+dfeta_programmetype,389040007,0,1033,Overseas Trained Teacher Programme,NULL
+dfeta_programmetype,389040008,0,1033,Registered Teacher Programme,NULL
+dfeta_programmetype,389040009,0,1033,Graduate Teacher Programme,NULL
+dfeta_programmetype,389040010,0,1033,Assessment Only Route,NULL
+dfeta_programmetype,389040011,0,1033,Core Flexible,NULL
+dfeta_programmetype,389040012,0,1033,Licensed Teacher Programme,NULL
+dfeta_programmetype,389040013,0,1033,Undergraduate Opt In,NULL
+dfeta_programmetype,389040014,0,1033,EYITT - Assessment Only,NULL
+dfeta_programmetype,389040015,0,1033,EYITT - Graduate Entry,NULL
+dfeta_programmetype,389040016,0,1033,EYITT - Graduate Employment Based,NULL
+dfeta_programmetype,389040017,0,1033,EYITT - Undergraduate,NULL
+dfeta_programmetype,389040018,0,1033,EYITT - School Direct (Early Years),NULL
+dfeta_programmetype,389040019,0,1033,Apprenticeship,NULL
+dfeta_programmetype,389040020,0,1033,Future Teaching Scholars,NULL
+dfeta_result,389040000,0,1033,Pass,NULL
+dfeta_result,389040001,0,1033,Fail,NULL
+dfeta_result,389040002,0,1033,Withdrawn,NULL
+dfeta_result,389040003,0,1033,In Training,NULL
+dfeta_result,389040004,0,1033,Approved,NULL
+dfeta_result,389040005,0,1033,Deferred,NULL
+dfeta_result,389040006,0,1033,Deferred for Skills Tests,NULL
+dfeta_result,389040007,0,1033,Under Assessment,NULL
+dfeta_result,389040008,0,1033,Application Received,NULL
+dfeta_result,389040009,0,1033,Application Unsuccessful,NULL
+dfeta_result,389040010,0,1033,Info,NULL
+dfeta_result,389040011,0,1033,No Result Submitted,NULL
+dfeta_route,389040000,0,1033,Scotland,NULL
+dfeta_route,389040001,0,1033,Northern Ireland,NULL
+dfeta_route,389040002,0,1033,EEA,NULL
+dfeta_route,389040003,0,1033,OTT,NULL
+dfeta_sc_inductionstatusdecision,389040000,0,1033,Exempt - Full Registration GTCS,NULL
+dfeta_sc_inductionstatusdecision,389040001,0,1033,Exempt - Qualified pre 07/05/1999,NULL
+dfeta_serviceleaver,389040000,0,1033,Not known,NULL
+dfeta_serviceleaver,389040001,0,1033,"Trainee has NOT LEFT full time employment in the British Army, Royal Air Force or Royal Navy in the past 5 years",NULL
+dfeta_serviceleaver,389040002,0,1033,"Trainee has left full time employment in the British Army, Royal Air Force or Royal Navy in the past 5 years",NULL
+dfeta_serviceleaver,389040003,0,1033,Information refused,NULL
+dfeta_specialisedagerangefrom,389040000,0,1033,01,NULL
+dfeta_specialisedagerangefrom,389040001,0,1033,02,NULL
+dfeta_specialisedagerangefrom,389040002,0,1033,03,NULL
+dfeta_specialisedagerangefrom,389040003,0,1033,04,NULL
+dfeta_specialisedagerangefrom,389040004,0,1033,05,NULL
+dfeta_specialisedagerangefrom,389040005,0,1033,06,NULL
+dfeta_specialisedagerangefrom,389040006,0,1033,07,NULL
+dfeta_specialisedagerangefrom,389040007,0,1033,08,NULL
+dfeta_specialisedagerangefrom,389040008,0,1033,09,NULL
+dfeta_specialisedagerangefrom,389040009,0,1033,10,NULL
+dfeta_specialisedagerangefrom,389040010,0,1033,11,NULL
+dfeta_specialisedagerangefrom,389040011,0,1033,12,NULL
+dfeta_specialisedagerangefrom,389040012,0,1033,13,NULL
+dfeta_specialisedagerangefrom,389040013,0,1033,14,NULL
+dfeta_specialisedagerangefrom,389040014,0,1033,15,NULL
+dfeta_specialisedagerangefrom,389040015,0,1033,16,NULL
+dfeta_specialisedagerangefrom,389040016,0,1033,17,NULL
+dfeta_specialisedagerangefrom,389040017,0,1033,18,NULL
+dfeta_specialisedagerangefrom,389040018,0,1033,19,NULL
+dfeta_specialisedagerangefrom,389040019,0,1033,99,NULL
+dfeta_specialisedagerangefrom,389040020,0,1033,Further Education,NULL
+dfeta_specialisedagerangefrom,389040021,0,1033,Foundation Stage,NULL
+dfeta_specialisedagerangefrom,389040022,0,1033,Key Stage 1,NULL
+dfeta_specialisedagerangefrom,389040023,0,1033,Key Stage 2,NULL
+dfeta_specialisedagerangefrom,389040024,0,1033,Key Stage 3,NULL
+dfeta_specialisedagerangefrom,389040025,0,1033,Key Stage 4,NULL
+dfeta_specialisedagerangefrom,389040026,0,1033,Not applicable,NULL
+dfeta_specialisedagerangefrom,389040027,0,1033,Other,NULL
+dfeta_specialisedagerangefrom,389040028,0,1033,Post 16,NULL
+dfeta_specialisedagerangefrom,389040029,0,1033,00,NULL
+dfeta_specialisedagerangeto,389040000,0,1033,01,NULL
+dfeta_specialisedagerangeto,389040001,0,1033,02,NULL
+dfeta_specialisedagerangeto,389040002,0,1033,03,NULL
+dfeta_specialisedagerangeto,389040003,0,1033,04,NULL
+dfeta_specialisedagerangeto,389040004,0,1033,05,NULL
+dfeta_specialisedagerangeto,389040005,0,1033,06,NULL
+dfeta_specialisedagerangeto,389040006,0,1033,07,NULL
+dfeta_specialisedagerangeto,389040007,0,1033,08,NULL
+dfeta_specialisedagerangeto,389040008,0,1033,09,NULL
+dfeta_specialisedagerangeto,389040009,0,1033,10,NULL
+dfeta_specialisedagerangeto,389040010,0,1033,11,NULL
+dfeta_specialisedagerangeto,389040011,0,1033,12,NULL
+dfeta_specialisedagerangeto,389040012,0,1033,13,NULL
+dfeta_specialisedagerangeto,389040013,0,1033,14,NULL
+dfeta_specialisedagerangeto,389040014,0,1033,15,NULL
+dfeta_specialisedagerangeto,389040015,0,1033,16,NULL
+dfeta_specialisedagerangeto,389040016,0,1033,17,NULL
+dfeta_specialisedagerangeto,389040017,0,1033,18,NULL
+dfeta_specialisedagerangeto,389040018,0,1033,19,NULL
+dfeta_specialisedagerangeto,389040019,0,1033,99,NULL
+dfeta_specialisedagerangeto,389040020,0,1033,Further Education,NULL
+dfeta_specialisedagerangeto,389040021,0,1033,Foundation Stage,NULL
+dfeta_specialisedagerangeto,389040022,0,1033,Key Stage 1,NULL
+dfeta_specialisedagerangeto,389040023,0,1033,Key Stage 2,NULL
+dfeta_specialisedagerangeto,389040024,0,1033,Key Stage 3,NULL
+dfeta_specialisedagerangeto,389040025,0,1033,Key Stage 4,NULL
+dfeta_specialisedagerangeto,389040026,0,1033,Not applicable,NULL
+dfeta_specialisedagerangeto,389040027,0,1033,Other,NULL
+dfeta_specialisedagerangeto,389040028,0,1033,Post 16,NULL
+dfeta_specialisedagerangeto,389040029,0,1033,00,NULL
+dfeta_taughtagerangefrom,389040000,0,1033,01,NULL
+dfeta_taughtagerangefrom,389040001,0,1033,02,NULL
+dfeta_taughtagerangefrom,389040002,0,1033,03,NULL
+dfeta_taughtagerangefrom,389040003,0,1033,04,NULL
+dfeta_taughtagerangefrom,389040004,0,1033,05,NULL
+dfeta_taughtagerangefrom,389040005,0,1033,06,NULL
+dfeta_taughtagerangefrom,389040006,0,1033,07,NULL
+dfeta_taughtagerangefrom,389040007,0,1033,08,NULL
+dfeta_taughtagerangefrom,389040008,0,1033,09,NULL
+dfeta_taughtagerangefrom,389040009,0,1033,10,NULL
+dfeta_taughtagerangefrom,389040010,0,1033,11,NULL
+dfeta_taughtagerangefrom,389040011,0,1033,12,NULL
+dfeta_taughtagerangefrom,389040012,0,1033,13,NULL
+dfeta_taughtagerangefrom,389040013,0,1033,14,NULL
+dfeta_taughtagerangefrom,389040014,0,1033,15,NULL
+dfeta_taughtagerangefrom,389040015,0,1033,16,NULL
+dfeta_taughtagerangefrom,389040016,0,1033,17,NULL
+dfeta_taughtagerangefrom,389040017,0,1033,18,NULL
+dfeta_taughtagerangefrom,389040018,0,1033,19,NULL
+dfeta_taughtagerangefrom,389040019,0,1033,99,NULL
+dfeta_taughtagerangefrom,389040020,0,1033,Further Education,NULL
+dfeta_taughtagerangefrom,389040021,0,1033,Foundation Stage,NULL
+dfeta_taughtagerangefrom,389040022,0,1033,Key Stage 1,NULL
+dfeta_taughtagerangefrom,389040023,0,1033,Key Stage 2,NULL
+dfeta_taughtagerangefrom,389040024,0,1033,Key Stage 3,NULL
+dfeta_taughtagerangefrom,389040025,0,1033,Key Stage 4,NULL
+dfeta_taughtagerangefrom,389040026,0,1033,Not applicable,NULL
+dfeta_taughtagerangefrom,389040027,0,1033,Other,NULL
+dfeta_taughtagerangefrom,389040028,0,1033,Post 16,NULL
+dfeta_taughtagerangefrom,389040029,0,1033,00,NULL
+dfeta_taughtagerangeto,389040000,0,1033,01,NULL
+dfeta_taughtagerangeto,389040001,0,1033,02,NULL
+dfeta_taughtagerangeto,389040002,0,1033,03,NULL
+dfeta_taughtagerangeto,389040003,0,1033,04,NULL
+dfeta_taughtagerangeto,389040004,0,1033,05,NULL
+dfeta_taughtagerangeto,389040005,0,1033,06,NULL
+dfeta_taughtagerangeto,389040006,0,1033,07,NULL
+dfeta_taughtagerangeto,389040007,0,1033,08,NULL
+dfeta_taughtagerangeto,389040008,0,1033,09,NULL
+dfeta_taughtagerangeto,389040009,0,1033,10,NULL
+dfeta_taughtagerangeto,389040010,0,1033,11,NULL
+dfeta_taughtagerangeto,389040011,0,1033,12,NULL
+dfeta_taughtagerangeto,389040012,0,1033,13,NULL
+dfeta_taughtagerangeto,389040013,0,1033,14,NULL
+dfeta_taughtagerangeto,389040014,0,1033,15,NULL
+dfeta_taughtagerangeto,389040015,0,1033,16,NULL
+dfeta_taughtagerangeto,389040016,0,1033,17,NULL
+dfeta_taughtagerangeto,389040017,0,1033,18,NULL
+dfeta_taughtagerangeto,389040018,0,1033,19,NULL
+dfeta_taughtagerangeto,389040019,0,1033,99,NULL
+dfeta_taughtagerangeto,389040020,0,1033,Further Education,NULL
+dfeta_taughtagerangeto,389040021,0,1033,Foundation Stage,NULL
+dfeta_taughtagerangeto,389040022,0,1033,Key Stage 1,NULL
+dfeta_taughtagerangeto,389040023,0,1033,Key Stage 2,NULL
+dfeta_taughtagerangeto,389040024,0,1033,Key Stage 3,NULL
+dfeta_taughtagerangeto,389040025,0,1033,Key Stage 4,NULL
+dfeta_taughtagerangeto,389040026,0,1033,Not applicable,NULL
+dfeta_taughtagerangeto,389040027,0,1033,Other,NULL
+dfeta_taughtagerangeto,389040028,0,1033,Post 16,NULL
+dfeta_taughtagerangeto,389040029,0,1033,00,NULL
+dfeta_title,389040000,0,1033,Baron,NULL
+dfeta_title,389040001,0,1033,Baroness,NULL
+dfeta_title,389040002,0,1033,Canon,NULL
+dfeta_title,389040003,0,1033,Captain,NULL
+dfeta_title,389040004,0,1033,Dame,NULL
+dfeta_title,389040005,0,1033,Dr.,NULL
+dfeta_title,389040006,0,1033,Earl,NULL
+dfeta_title,389040007,0,1033,Father,NULL
+dfeta_title,389040008,0,1033,Lady,NULL
+dfeta_title,389040009,0,1033,Lord,NULL
+dfeta_title,389040010,0,1033,Lt.,NULL
+dfeta_title,389040011,0,1033,Major,NULL
+dfeta_title,389040012,0,1033,Miss,NULL
+dfeta_title,389040013,0,1033,Mr.,NULL
+dfeta_title,389040014,0,1033,Mrs.,NULL
+dfeta_title,389040015,0,1033,Ms.,NULL
+dfeta_title,389040016,0,1033,Pastor,NULL
+dfeta_title,389040017,0,1033,Prof,NULL
+dfeta_title,389040018,0,1033,Rabbi,NULL
+dfeta_title,389040019,0,1033,Rev,NULL
+dfeta_title,389040020,0,1033,Rt Hon,NULL
+dfeta_title,389040021,0,1033,Sir,NULL
+dfeta_title,389040022,0,1033,Sister,NULL
+dfeta_title,389040023,0,1033,Mx.,NULL
+dfeta_type,389040000,0,1033,First Name,NULL
+dfeta_type,389040001,0,1033,Middle Name,NULL
+dfeta_type,389040002,0,1033,Last Name,NULL
+dfeta_type,389040003,0,1033,Title,NULL
+dfeta_type,389040004,0,1033,MR OTT supporting letter,NULL
+dfeta_type,389040005,0,1033,MR Additional Training evidence,NULL
+dfeta_type,389040006,0,1033,Letter,NULL
+dfeta_type,389040007,0,1033,Email,NULL
+evaluatefit,0,0,1033,Yes,NULL
+evaluatefit,1,0,1033,No,NULL
+initialcommunication,0,0,1033,Contacted,NULL
+initialcommunication,1,0,1033,Not Contacted,NULL
+isregularactivity,0,0,1033,No,NULL
+isregularactivity,1,0,1033,Yes,NULL
+messagetypecode,0,0,1033,Public Message,NULL
+messagetypecode,1,0,1033,Private Message,NULL
+msdyn_leadgrade,0,0,1033,Grade A,NULL
+msdyn_leadgrade,1,0,1033,Grade B,NULL
+msdyn_leadgrade,2,0,1033,Grade C,NULL
+msdyn_leadgrade,3,0,1033,Grade D,NULL
+msdyn_leadscoretrend,0,0,1033,Improving,NULL
+msdyn_leadscoretrend,1,0,1033,Steady,NULL
+msdyn_leadscoretrend,2,0,1033,Declining,NULL
+msdyn_leadscoretrend,3,0,1033,Not enough info,NULL
+need,0,0,1033,Must have,NULL
+need,1,0,1033,Should have,NULL
+need,2,0,1033,Good to have,NULL
+need,3,0,1033,No need,NULL
+purchaseprocess,0,0,1033,Individual,NULL
+purchaseprocess,1,0,1033,Committee,NULL
+purchaseprocess,2,0,1033,Unknown,NULL
+purchasetimeframe,0,0,1033,Immediate,NULL
+purchasetimeframe,1,0,1033,This Quarter,NULL
+purchasetimeframe,2,0,1033,Next Quarter,NULL
+purchasetimeframe,3,0,1033,This Year,NULL
+purchasetimeframe,4,0,1033,Unknown,NULL
+salesstage,0,0,1033,Qualify,NULL
+servicestage,0,0,1033,Identify,NULL
+servicestage,1,0,1033,Research,NULL
+servicestage,2,0,1033,Resolve,NULL
