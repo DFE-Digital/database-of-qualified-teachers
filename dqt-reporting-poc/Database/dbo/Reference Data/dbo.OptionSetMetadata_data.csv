@@ -1,0 +1,576 @@
+EntityName,OptionSetName,Option,IsUserLocalizedLabel,LocalizedLabelLanguageCode,LocalizedLabel
+account,accountcategorycode,1,0,1033,School
+account,accountcategorycode,2,0,1033,Employment Agency
+account,accountcategorycode,389040000,0,1033,College
+account,accountcategorycode,389040001,0,1033,HEI
+account,accountcategorycode,389040002,0,1033,Local Authority
+account,accountcategorycode,389040003,0,1033,Other
+account,accountclassificationcode,1,0,1033,Default Value
+account,accountratingcode,1,0,1033,Default Value
+account,address1_addresstypecode,1,0,1033,Bill To
+account,address1_addresstypecode,2,0,1033,Ship To
+account,address1_addresstypecode,3,0,1033,Primary
+account,address1_addresstypecode,4,0,1033,Other
+account,address1_freighttermscode,1,0,1033,FOB
+account,address1_freighttermscode,2,0,1033,No Charge
+account,address1_shippingmethodcode,1,0,1033,Airborne
+account,address1_shippingmethodcode,2,0,1033,DHL
+account,address1_shippingmethodcode,3,0,1033,FedEx
+account,address1_shippingmethodcode,4,0,1033,UPS
+account,address1_shippingmethodcode,5,0,1033,Postal Mail
+account,address1_shippingmethodcode,6,0,1033,Full Load
+account,address1_shippingmethodcode,7,0,1033,Will Call
+account,address2_addresstypecode,1,0,1033,Default Value
+account,address2_freighttermscode,1,0,1033,Default Value
+account,address2_shippingmethodcode,1,0,1033,Default Value
+account,businesstypecode,1,0,1033,Default Value
+account,creditonhold,0,0,1033,No
+account,creditonhold,1,0,1033,Yes
+account,customersizecode,1,0,1033,Default Value
+account,customertypecode,1,0,1033,Competitor
+account,customertypecode,2,0,1033,Consultant
+account,customertypecode,3,0,1033,Customer
+account,customertypecode,4,0,1033,Investor
+account,customertypecode,5,0,1033,Partner
+account,customertypecode,6,0,1033,Influencer
+account,customertypecode,7,0,1033,Press
+account,customertypecode,8,0,1033,Prospect
+account,customertypecode,9,0,1033,Reseller
+account,customertypecode,10,0,1033,Supplier
+account,customertypecode,11,0,1033,Vendor
+account,customertypecode,12,0,1033,Other
+account,dfeta_appropriatebody,0,0,1033,No
+account,dfeta_appropriatebody,1,0,1033,Yes
+account,dfeta_dbs_childrensbarredlist_access,0,0,1033,No
+account,dfeta_dbs_childrensbarredlist_access,1,0,1033,Yes
+account,dfeta_trainingprovider,0,0,1033,No
+account,dfeta_trainingprovider,1,0,1033,Yes
+account,donotbulkemail,0,0,1033,Allow
+account,donotbulkemail,1,0,1033,Do Not Allow
+account,donotbulkpostalmail,0,0,1033,No
+account,donotbulkpostalmail,1,0,1033,Yes
+account,donotemail,0,0,1033,Allow
+account,donotemail,1,0,1033,Do Not Allow
+account,donotfax,0,0,1033,Allow
+account,donotfax,1,0,1033,Do Not Allow
+account,donotphone,0,0,1033,Allow
+account,donotphone,1,0,1033,Do Not Allow
+account,donotpostalmail,0,0,1033,Allow
+account,donotpostalmail,1,0,1033,Do Not Allow
+account,donotsendmm,0,0,1033,Send
+account,donotsendmm,1,0,1033,Do Not Send
+account,followemail,0,0,1033,Do Not Allow
+account,followemail,1,0,1033,Allow
+account,industrycode,1,0,1033,Accounting
+account,industrycode,2,0,1033,Agriculture and Non-petrol Natural Resource Extraction
+account,industrycode,3,0,1033,Broadcasting Printing and Publishing
+account,industrycode,4,0,1033,Brokers
+account,industrycode,5,0,1033,Building Supply Retail
+account,industrycode,6,0,1033,Business Services
+account,industrycode,7,0,1033,Consulting
+account,industrycode,8,0,1033,Consumer Services
+account,industrycode,9,0,1033,"Design, Direction and Creative Management"
+account,industrycode,10,0,1033,"Distributors, Dispatchers and Processors"
+account,industrycode,11,0,1033,Doctor's Offices and Clinics
+account,industrycode,12,0,1033,Durable Manufacturing
+account,industrycode,13,0,1033,Eating and Drinking Places
+account,industrycode,14,0,1033,Entertainment Retail
+account,industrycode,15,0,1033,Equipment Rental and Leasing
+account,industrycode,16,0,1033,Financial
+account,industrycode,17,0,1033,Food and Tobacco Processing
+account,industrycode,18,0,1033,Inbound Capital Intensive Processing
+account,industrycode,19,0,1033,Inbound Repair and Services
+account,industrycode,20,0,1033,Insurance
+account,industrycode,21,0,1033,Legal Services
+account,industrycode,22,0,1033,Non-Durable Merchandise Retail
+account,industrycode,23,0,1033,Outbound Consumer Service
+account,industrycode,24,0,1033,Petrochemical Extraction and Distribution
+account,industrycode,25,0,1033,Service Retail
+account,industrycode,26,0,1033,SIG Affiliations
+account,industrycode,27,0,1033,Social Services
+account,industrycode,28,0,1033,Special Outbound Trade Contractors
+account,industrycode,29,0,1033,Specialty Realty
+account,industrycode,30,0,1033,Transportation
+account,industrycode,31,0,1033,Utility Creation and Distribution
+account,industrycode,32,0,1033,Vehicle Retail
+account,industrycode,33,0,1033,Wholesale
+account,isprivate,0,0,1033,No
+account,isprivate,1,0,1033,Yes
+account,marketingonly,0,0,1033,No
+account,marketingonly,1,0,1033,Yes
+account,merged,0,0,1033,No
+account,merged,1,0,1033,Yes
+account,msdyn_gdproptout,0,0,1033,No
+account,msdyn_gdproptout,1,0,1033,Yes
+account,ownershipcode,1,0,1033,Public
+account,ownershipcode,2,0,1033,Private
+account,ownershipcode,3,0,1033,Subsidiary
+account,ownershipcode,4,0,1033,Other
+account,participatesinworkflow,0,0,1033,No
+account,participatesinworkflow,1,0,1033,Yes
+account,paymenttermscode,1,0,1033,Net 30
+account,paymenttermscode,2,0,1033,"2% 10, Net 30"
+account,paymenttermscode,3,0,1033,Net 45
+account,paymenttermscode,4,0,1033,Net 60
+account,preferredappointmentdaycode,0,0,1033,Sunday
+account,preferredappointmentdaycode,1,0,1033,Monday
+account,preferredappointmentdaycode,2,0,1033,Tuesday
+account,preferredappointmentdaycode,3,0,1033,Wednesday
+account,preferredappointmentdaycode,4,0,1033,Thursday
+account,preferredappointmentdaycode,5,0,1033,Friday
+account,preferredappointmentdaycode,6,0,1033,Saturday
+account,preferredappointmenttimecode,1,0,1033,Morning
+account,preferredappointmenttimecode,2,0,1033,Afternoon
+account,preferredappointmenttimecode,3,0,1033,Evening
+account,preferredcontactmethodcode,1,0,1033,Any
+account,preferredcontactmethodcode,2,0,1033,E-mail
+account,preferredcontactmethodcode,3,0,1033,Phone
+account,preferredcontactmethodcode,4,0,1033,Fax
+account,preferredcontactmethodcode,5,0,1033,Mail
+account,shippingmethodcode,1,0,1033,Default Value
+account,territorycode,1,0,1033,Default Value
+campaign,istemplate,0,0,1033,No
+campaign,istemplate,1,0,1033,Yes
+campaign,msdyn_gdproptout,0,0,1033,No
+campaign,msdyn_gdproptout,1,0,1033,Yes
+campaign,typecode,1,0,1033,Advertisement
+campaign,typecode,2,0,1033,Direct Marketing
+campaign,typecode,3,0,1033,Event
+campaign,typecode,4,0,1033,Co-branding
+campaign,typecode,5,0,1033,Other
+contact,accountrolecode,1,0,1033,Decision Maker
+contact,accountrolecode,2,0,1033,Employee
+contact,accountrolecode,3,0,1033,Influencer
+contact,address1_addresstypecode,1,0,1033,Bill To
+contact,address1_addresstypecode,2,0,1033,Ship To
+contact,address1_addresstypecode,3,0,1033,Primary
+contact,address1_addresstypecode,4,0,1033,Other
+contact,address1_freighttermscode,1,0,1033,FOB
+contact,address1_freighttermscode,2,0,1033,No Charge
+contact,address1_shippingmethodcode,1,0,1033,Airborne
+contact,address1_shippingmethodcode,2,0,1033,DHL
+contact,address1_shippingmethodcode,3,0,1033,FedEx
+contact,address1_shippingmethodcode,4,0,1033,UPS
+contact,address1_shippingmethodcode,5,0,1033,Postal Mail
+contact,address1_shippingmethodcode,6,0,1033,Full Load
+contact,address1_shippingmethodcode,7,0,1033,Will Call
+contact,address2_addresstypecode,1,0,1033,Default Value
+contact,address2_freighttermscode,1,0,1033,Default Value
+contact,address2_shippingmethodcode,1,0,1033,Default Value
+contact,address3_addresstypecode,1,0,1033,Default Value
+contact,address3_freighttermscode,1,0,1033,Default Value
+contact,address3_shippingmethodcode,1,0,1033,Default Value
+contact,creditonhold,0,0,1033,No
+contact,creditonhold,1,0,1033,Yes
+contact,customersizecode,1,0,1033,Default Value
+contact,customertypecode,1,0,1033,Default Value
+contact,dfeta_activesanctions,0,0,1033,No
+contact,dfeta_activesanctions,1,0,1033,Yes
+contact,dfeta_addressconsent,0,0,1033,No
+contact,dfeta_addressconsent,1,0,1033,Yes
+contact,dfeta_addressverificationflag,1,0,1033,Verified
+contact,dfeta_addressverificationflag,2,0,1033,Failed
+contact,dfeta_addressverificationflag,3,0,1033,Customer Preferred
+contact,dfeta_disability,0,0,1033,No
+contact,dfeta_disability,1,0,1033,Yes
+contact,dfeta_suppressionflag,0,0,1033,Deceased
+contact,dfeta_suppressionflag,1,0,1033,Goneaway
+contact,dfeta_trnrequired,0,0,1033,No
+contact,dfeta_trnrequired,1,0,1033,Yes
+contact,donotbulkemail,0,0,1033,Allow
+contact,donotbulkemail,1,0,1033,Do Not Allow
+contact,donotbulkpostalmail,0,0,1033,No
+contact,donotbulkpostalmail,1,0,1033,Yes
+contact,donotemail,0,0,1033,Allow
+contact,donotemail,1,0,1033,Do Not Allow
+contact,donotfax,0,0,1033,Allow
+contact,donotfax,1,0,1033,Do Not Allow
+contact,donotphone,0,0,1033,Allow
+contact,donotphone,1,0,1033,Do Not Allow
+contact,donotpostalmail,0,0,1033,Allow
+contact,donotpostalmail,1,0,1033,Do Not Allow
+contact,donotsendmm,0,0,1033,Send
+contact,donotsendmm,1,0,1033,Do Not Send
+contact,educationcode,1,0,1033,Default Value
+contact,familystatuscode,1,0,1033,Single
+contact,familystatuscode,2,0,1033,Married
+contact,familystatuscode,3,0,1033,Divorced
+contact,familystatuscode,4,0,1033,Widowed
+contact,followemail,0,0,1033,Do Not Allow
+contact,followemail,1,0,1033,Allow
+contact,gendercode,1,0,1033,Male
+contact,gendercode,2,0,1033,Female
+contact,gendercode,389040000,0,1033,Other
+contact,haschildrencode,1,0,1033,Default Value
+contact,isautocreate,0,0,1033,No
+contact,isautocreate,1,0,1033,Yes
+contact,isbackofficecustomer,0,0,1033,No
+contact,isbackofficecustomer,1,0,1033,Yes
+contact,isprivate,0,0,1033,No
+contact,isprivate,1,0,1033,Yes
+contact,leadsourcecode,1,0,1033,Default Value
+contact,marketingonly,0,0,1033,No
+contact,marketingonly,1,0,1033,Yes
+contact,merged,0,0,1033,No
+contact,merged,1,0,1033,Yes
+contact,msdyn_gdproptout,0,0,1033,No
+contact,msdyn_gdproptout,1,0,1033,Yes
+contact,msdyn_orgchangestatus,0,0,1033,No Feedback
+contact,msdyn_orgchangestatus,1,0,1033,Not at Company
+contact,msdyn_orgchangestatus,2,0,1033,Ignore
+contact,participatesinworkflow,0,0,1033,No
+contact,participatesinworkflow,1,0,1033,Yes
+contact,paymenttermscode,1,0,1033,Net 30
+contact,paymenttermscode,2,0,1033,"2% 10, Net 30"
+contact,paymenttermscode,3,0,1033,Net 45
+contact,paymenttermscode,4,0,1033,Net 60
+contact,preferredappointmentdaycode,0,0,1033,Sunday
+contact,preferredappointmentdaycode,1,0,1033,Monday
+contact,preferredappointmentdaycode,2,0,1033,Tuesday
+contact,preferredappointmentdaycode,3,0,1033,Wednesday
+contact,preferredappointmentdaycode,4,0,1033,Thursday
+contact,preferredappointmentdaycode,5,0,1033,Friday
+contact,preferredappointmentdaycode,6,0,1033,Saturday
+contact,preferredappointmenttimecode,1,0,1033,Morning
+contact,preferredappointmenttimecode,2,0,1033,Afternoon
+contact,preferredappointmenttimecode,3,0,1033,Evening
+contact,preferredcontactmethodcode,1,0,1033,Any
+contact,preferredcontactmethodcode,2,0,1033,E-mail
+contact,preferredcontactmethodcode,3,0,1033,Mobile Phone
+contact,preferredcontactmethodcode,4,0,1033,Home Phone
+contact,preferredcontactmethodcode,5,0,1033,Work Phone
+contact,shippingmethodcode,1,0,1033,Default Value
+contact,territorycode,1,0,1033,Default Value
+dfeta_autonumber,dfeta_operation,389040000,0,1033,When record is created
+dfeta_autonumber,dfeta_operation,389040001,0,1033,When attribute is updated
+dfeta_autonumber,dfeta_overrideexistingnumber,0,0,1033,No
+dfeta_autonumber,dfeta_overrideexistingnumber,1,0,1033,Yes
+dfeta_businesseventaudit,dfeta_event,1,0,1033,Create
+dfeta_businesseventaudit,dfeta_event,2,0,1033,Update
+dfeta_country,dfeta_eeacountry,0,0,1033,No
+dfeta_country,dfeta_eeacountry,1,0,1033,Yes
+dfeta_country,dfeta_ottroutecountry,0,0,1033,No
+dfeta_country,dfeta_ottroutecountry,1,0,1033,Yes
+dfeta_document,dfeta_applicationsubmitted,0,0,1033,No
+dfeta_document,dfeta_applicationsubmitted,1,0,1033,Yes
+dfeta_document,dfeta_delete,0,0,1033,No
+dfeta_document,dfeta_delete,1,0,1033,Yes
+dfeta_earlyyearsstatus,dfeta_eytsdaterequired,0,0,1033,No
+dfeta_earlyyearsstatus,dfeta_eytsdaterequired,1,0,1033,Yes
+dfeta_induction,dfeta_appealreceived,0,0,1033,No
+dfeta_induction,dfeta_appealreceived,1,0,1033,Yes
+dfeta_induction,dfeta_transitionarrangementseligible,0,0,1033,No
+dfeta_induction,dfeta_transitionarrangementseligible,1,0,1033,Yes
+dfeta_initialteachertraining,dfeta_troopstoteach,0,0,1033,No
+dfeta_initialteachertraining,dfeta_troopstoteach,1,0,1033,Yes
+dfeta_integrationtransactionrecord,dfeta_duplicatestatus,389040000,0,1033,Duplicate
+dfeta_integrationtransactionrecord,dfeta_duplicatestatus,389040001,0,1033,Third Party Notified
+dfeta_integrationtransactionrecord,dfeta_duplicatestatus,389040002,0,1033,Duplicate Resolved
+dfeta_integrationtransactionrecord,dfeta_duplicatestatus,389040003,0,1033,Not Applicable
+dfeta_ittsubject,dfeta_restrictedpostqts,0,0,1033,No
+dfeta_ittsubject,dfeta_restrictedpostqts,1,0,1033,Yes
+dfeta_ittsubject,dfeta_restricteduseifpostqts,0,0,1033,No
+dfeta_ittsubject,dfeta_restricteduseifpostqts,1,0,1033,Yes
+dfeta_mrapplication,dfeta_completedinduction,0,0,1033,No
+dfeta_mrapplication,dfeta_completedinduction,1,0,1033,Yes
+dfeta_mrapplication,dfeta_confirmationemailsent,0,0,1033,No
+dfeta_mrapplication,dfeta_confirmationemailsent,1,0,1033,Yes
+dfeta_mrapplication,dfeta_eea_declineschecked,0,0,1033,No
+dfeta_mrapplication,dfeta_eea_declineschecked,1,0,1033,Yes
+dfeta_mrapplication,dfeta_eea_eligibilityconfirmed,0,0,1033,No
+dfeta_mrapplication,dfeta_eea_eligibilityconfirmed,1,0,1033,Yes
+dfeta_mrapplication,dfeta_eea_fiadditioninformationreceived,0,0,1033,No
+dfeta_mrapplication,dfeta_eea_fiadditioninformationreceived,1,0,1033,Yes
+dfeta_mrapplication,dfeta_eea_imiresponsereceived,0,0,1033,No
+dfeta_mrapplication,dfeta_eea_imiresponsereceived,1,0,1033,Yes
+dfeta_mrapplication,dfeta_ni_awardqts,0,0,1033,No
+dfeta_mrapplication,dfeta_ni_awardqts,1,0,1033,Yes
+dfeta_mrapplication,dfeta_noneea_3rdpartyletterbeingsent,0,0,1033,No
+dfeta_mrapplication,dfeta_noneea_3rdpartyletterbeingsent,1,0,1033,Yes
+dfeta_mrapplication,dfeta_noneea_awardqts,0,0,1033,No
+dfeta_mrapplication,dfeta_noneea_awardqts,1,0,1033,Yes
+dfeta_mrapplication,dfeta_onlinecheckallowed,0,0,1033,No
+dfeta_mrapplication,dfeta_onlinecheckallowed,1,0,1033,Yes
+dfeta_mrapplication,dfeta_qtsawarded,0,0,1033,No
+dfeta_mrapplication,dfeta_qtsawarded,1,0,1033,Yes
+dfeta_mrapplication,dfeta_sc_awardqts,0,0,1033,No
+dfeta_mrapplication,dfeta_sc_awardqts,1,0,1033,Yes
+dfeta_mrapplication,dfeta_sc_gtcsregistrationstatuschecked,0,0,1033,No
+dfeta_mrapplication,dfeta_sc_gtcsregistrationstatuschecked,1,0,1033,Yes
+dfeta_mrtraining,dfeta_senqual,389040000,0,1033,Yes
+dfeta_mrtraining,dfeta_senqual,389040001,0,1033,No
+dfeta_profileamendrequest,dfeta_requesttype,389040000,0,1033,Change of Date of Birth
+dfeta_profileamendrequest,dfeta_requesttype,389040001,0,1033,Change of First Name
+dfeta_profileamendrequest,dfeta_requesttype,389040002,0,1033,Change of Middle Name
+dfeta_profileamendrequest,dfeta_requesttype,389040003,0,1033,Change of Last Name
+dfeta_qualification,dfeta_hlta_moderationoutcome,389040000,0,1033,TBD
+dfeta_qualification,dfeta_npqel_awarded,0,0,1033,No
+dfeta_qualification,dfeta_npqel_awarded,1,0,1033,Yes
+dfeta_qualification,dfeta_npqh_awarded,0,0,1033,No
+dfeta_qualification,dfeta_npqh_awarded,1,0,1033,Yes
+dfeta_qualification,dfeta_npqml_awarded,0,0,1033,No
+dfeta_qualification,dfeta_npqml_awarded,1,0,1033,Yes
+dfeta_qualification,dfeta_npqsl_awarded,0,0,1033,No
+dfeta_qualification,dfeta_npqsl_awarded,1,0,1033,Yes
+dfeta_qualification,dfeta_type,389040000,0,1033,Higher Education
+dfeta_qualification,dfeta_type,389040001,0,1033,NPQH
+dfeta_qualification,dfeta_type,389040002,0,1033,Mandatory Qualification
+dfeta_qualification,dfeta_type,389040003,0,1033,HLTA
+dfeta_qualification,dfeta_type,389040004,0,1033,NPQSL
+dfeta_qualification,dfeta_type,389040005,0,1033,NPQML
+dfeta_qualification,dfeta_type,389040006,0,1033,NPQEL
+dfeta_sanction,dfeta_conditionmet,0,0,1033,No
+dfeta_sanction,dfeta_conditionmet,1,0,1033,Yes
+dfeta_sanction,dfeta_spent,0,0,1033,No
+dfeta_sanction,dfeta_spent,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_allreports,0,0,1033,No
+dfeta_sanctioncode,dfeta_allreports,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_blockselfserviceaccess,0,0,1033,No
+dfeta_sanctioncode,dfeta_blockselfserviceaccess,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_gtcsanctionreport,0,0,1033,No
+dfeta_sanctioncode,dfeta_gtcsanctionreport,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_individualteacherreport,0,0,1033,No
+dfeta_sanctioncode,dfeta_individualteacherreport,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_inductionfailreport,0,0,1033,No
+dfeta_sanctioncode,dfeta_inductionfailreport,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_othereeamemberstatereport,0,0,1033,No
+dfeta_sanctioncode,dfeta_othereeamemberstatereport,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_prohibitedteacherreport,0,0,1033,No
+dfeta_sanctioncode,dfeta_prohibitedteacherreport,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_restrictportalalertsharing,0,0,1033,No
+dfeta_sanctioncode,dfeta_restrictportalalertsharing,1,0,1033,Yes
+dfeta_sanctioncode,dfeta_section128barringdirectionreport,0,0,1033,No
+dfeta_sanctioncode,dfeta_section128barringdirectionreport,1,0,1033,Yes
+dfeta_serviceannouncement,dfeta_display,0,0,1033,No
+dfeta_serviceannouncement,dfeta_display,1,0,1033,Yes
+dfeta_teacherstatus,dfeta_qtsdaterequired,0,0,1033,No
+dfeta_teacherstatus,dfeta_qtsdaterequired,1,0,1033,Yes
+incident,activitiescomplete,0,0,1033,No
+incident,activitiescomplete,1,0,1033,Yes
+incident,casetypecode,1,0,1033,Question
+incident,casetypecode,2,0,1033,Problem
+incident,casetypecode,3,0,1033,Request
+incident,checkemail,0,0,1033,No
+incident,checkemail,1,0,1033,Yes
+incident,contractservicelevelcode,1,0,1033,Gold
+incident,contractservicelevelcode,2,0,1033,Silver
+incident,contractservicelevelcode,3,0,1033,Bronze
+incident,customercontacted,0,0,1033,No
+incident,customercontacted,1,0,1033,Yes
+incident,customersatisfactioncode,1,0,1033,Very Dissatisfied
+incident,customersatisfactioncode,2,0,1033,Dissatisfied
+incident,customersatisfactioncode,3,0,1033,Neutral
+incident,customersatisfactioncode,4,0,1033,Satisfied
+incident,customersatisfactioncode,5,0,1033,Very Satisfied
+incident,decremententitlementterm,0,0,1033,No
+incident,decremententitlementterm,1,0,1033,Yes
+incident,firstresponsesent,0,0,1033,No
+incident,firstresponsesent,1,0,1033,Yes
+incident,firstresponseslastatus,1,0,1033,In Progress
+incident,firstresponseslastatus,2,0,1033,Nearing Noncompliance
+incident,firstresponseslastatus,3,0,1033,Succeeded
+incident,firstresponseslastatus,4,0,1033,Noncompliant
+incident,followuptaskcreated,0,0,1033,No
+incident,followuptaskcreated,1,0,1033,Yes
+incident,incidentstagecode,1,0,1033,Default Value
+incident,isdecrementing,0,0,1033,No
+incident,isdecrementing,1,0,1033,Yes
+incident,isescalated,0,0,1033,No
+incident,isescalated,1,0,1033,Yes
+incident,merged,0,0,1033,No
+incident,merged,1,0,1033,Yes
+incident,prioritycode,1,0,1033,High
+incident,prioritycode,2,0,1033,Normal
+incident,prioritycode,3,0,1033,Low
+incident,resolvebyslastatus,1,0,1033,In Progress
+incident,resolvebyslastatus,2,0,1033,Nearing Noncompliance
+incident,resolvebyslastatus,3,0,1033,Succeeded
+incident,resolvebyslastatus,4,0,1033,Noncompliant
+incident,routecase,0,0,1033,No
+incident,routecase,1,0,1033,Yes
+incident,severitycode,1,0,1033,Default Value
+incidentresolution,instancetypecode,0,0,1033,Not Recurring
+incidentresolution,instancetypecode,1,0,1033,Recurring Master
+incidentresolution,instancetypecode,2,0,1033,Recurring Instance
+incidentresolution,instancetypecode,3,0,1033,Recurring Exception
+incidentresolution,instancetypecode,4,0,1033,Recurring Future Exception
+incidentresolution,isbilled,0,0,1033,No
+incidentresolution,isbilled,1,0,1033,Yes
+incidentresolution,ismapiprivate,0,0,1033,No
+incidentresolution,ismapiprivate,1,0,1033,Yes
+incidentresolution,isworkflowcreated,0,0,1033,No
+incidentresolution,isworkflowcreated,1,0,1033,Yes
+incidentresolution,leftvoicemail,0,0,1033,No
+incidentresolution,leftvoicemail,1,0,1033,Yes
+incidentresolution,prioritycode,0,0,1033,Low
+incidentresolution,prioritycode,1,0,1033,Normal
+incidentresolution,prioritycode,2,0,1033,High
+incidentresolution,resolutiontypecode,5,0,1033,Problem Solved
+incidentresolution,resolutiontypecode,1000,0,1033,Information Provided
+lead,address1_addresstypecode,1,0,1033,Default Value
+lead,address1_shippingmethodcode,1,0,1033,Default Value
+lead,address2_addresstypecode,1,0,1033,Default Value
+lead,address2_shippingmethodcode,1,0,1033,Default Value
+lead,dfeta_anonymised,0,0,1033,No
+lead,dfeta_anonymised,1,0,1033,Yes
+lead,dfeta_diversity,0,0,1033,No
+lead,dfeta_diversity,1,0,1033,Yes
+lead,dfeta_gender,1,0,1033,Male
+lead,dfeta_gender,2,0,1033,Female
+lead,dfeta_gender,389040000,0,1033,Other
+lead,dfeta_overwriteduplicatedetection,0,0,1033,No
+lead,dfeta_overwriteduplicatedetection,1,0,1033,Yes
+lead,dfeta_sendnotificationemail,0,0,1033,No
+lead,dfeta_sendnotificationemail,1,0,1033,Yes
+lead,donotbulkemail,0,0,1033,Allow
+lead,donotbulkemail,1,0,1033,Do Not Allow
+lead,donotemail,0,0,1033,Allow
+lead,donotemail,1,0,1033,Do Not Allow
+lead,donotfax,0,0,1033,Allow
+lead,donotfax,1,0,1033,Do Not Allow
+lead,donotphone,0,0,1033,Allow
+lead,donotphone,1,0,1033,Do Not Allow
+lead,donotpostalmail,0,0,1033,Allow
+lead,donotpostalmail,1,0,1033,Do Not Allow
+lead,donotsendmm,0,0,1033,Send
+lead,donotsendmm,1,0,1033,Do Not Send
+lead,followemail,0,0,1033,Do Not Allow
+lead,followemail,1,0,1033,Allow
+lead,industrycode,1,0,1033,Accounting
+lead,industrycode,2,0,1033,Agriculture and Non-petrol Natural Resource Extraction
+lead,industrycode,3,0,1033,Broadcasting Printing and Publishing
+lead,industrycode,4,0,1033,Brokers
+lead,industrycode,5,0,1033,Building Supply Retail
+lead,industrycode,6,0,1033,Business Services
+lead,industrycode,7,0,1033,Consulting
+lead,industrycode,8,0,1033,Consumer Services
+lead,industrycode,9,0,1033,"Design, Direction and Creative Management"
+lead,industrycode,10,0,1033,"Distributors, Dispatchers and Processors"
+lead,industrycode,11,0,1033,Doctor's Offices and Clinics
+lead,industrycode,12,0,1033,Durable Manufacturing
+lead,industrycode,13,0,1033,Eating and Drinking Places
+lead,industrycode,14,0,1033,Entertainment Retail
+lead,industrycode,15,0,1033,Equipment Rental and Leasing
+lead,industrycode,16,0,1033,Financial
+lead,industrycode,17,0,1033,Food and Tobacco Processing
+lead,industrycode,18,0,1033,Inbound Capital Intensive Processing
+lead,industrycode,19,0,1033,Inbound Repair and Services
+lead,industrycode,20,0,1033,Insurance
+lead,industrycode,21,0,1033,Legal Services
+lead,industrycode,22,0,1033,Non-Durable Merchandise Retail
+lead,industrycode,23,0,1033,Outbound Consumer Service
+lead,industrycode,24,0,1033,Petrochemical Extraction and Distribution
+lead,industrycode,25,0,1033,Service Retail
+lead,industrycode,26,0,1033,SIG Affiliations
+lead,industrycode,27,0,1033,Social Services
+lead,industrycode,28,0,1033,Special Outbound Trade Contractors
+lead,industrycode,29,0,1033,Specialty Realty
+lead,industrycode,30,0,1033,Transportation
+lead,industrycode,31,0,1033,Utility Creation and Distribution
+lead,industrycode,32,0,1033,Vehicle Retail
+lead,industrycode,33,0,1033,Wholesale
+lead,isautocreate,0,0,1033,No
+lead,isautocreate,1,0,1033,Yes
+lead,isprivate,0,0,1033,No
+lead,isprivate,1,0,1033,Yes
+lead,leadqualitycode,1,0,1033,Hot
+lead,leadqualitycode,2,0,1033,Warm
+lead,leadqualitycode,3,0,1033,Cold
+lead,leadsourcecode,1,0,1033,Advertisement
+lead,leadsourcecode,2,0,1033,Employee Referral
+lead,leadsourcecode,3,0,1033,External Referral
+lead,leadsourcecode,4,0,1033,Partner
+lead,leadsourcecode,5,0,1033,Public Relations
+lead,leadsourcecode,6,0,1033,Seminar
+lead,leadsourcecode,7,0,1033,Trade Show
+lead,leadsourcecode,8,0,1033,Web
+lead,leadsourcecode,9,0,1033,Word of Mouth
+lead,leadsourcecode,10,0,1033,Other
+lead,merged,0,0,1033,No
+lead,merged,1,0,1033,Yes
+lead,msdyn_gdproptout,0,0,1033,No
+lead,msdyn_gdproptout,1,0,1033,Yes
+lead,msdyn_salesassignmentresult,0,0,1033,Succeeded
+lead,msdyn_salesassignmentresult,1,0,1033,Failed
+lead,participatesinworkflow,0,0,1033,No
+lead,participatesinworkflow,1,0,1033,Yes
+lead,preferredcontactmethodcode,1,0,1033,Any
+lead,preferredcontactmethodcode,2,0,1033,Email
+lead,preferredcontactmethodcode,3,0,1033,Phone
+lead,preferredcontactmethodcode,4,0,1033,Fax
+lead,preferredcontactmethodcode,5,0,1033,Mail
+lead,prioritycode,1,0,1033,Default Value
+lead,salesstagecode,1,0,1033,Default Value
+systemuser,accessmode,0,0,1033,Read-Write
+systemuser,accessmode,1,0,1033,Administrative
+systemuser,accessmode,2,0,1033,Read
+systemuser,accessmode,3,0,1033,Support User
+systemuser,accessmode,4,0,1033,Non-interactive
+systemuser,accessmode,5,0,1033,Delegated Admin
+systemuser,address1_addresstypecode,1,0,1033,Default Value
+systemuser,address1_shippingmethodcode,1,0,1033,Default Value
+systemuser,address2_addresstypecode,1,0,1033,Default Value
+systemuser,address2_shippingmethodcode,1,0,1033,Default Value
+systemuser,azurestate,0,0,1033,Exists
+systemuser,azurestate,1,0,1033,Soft deleted
+systemuser,azurestate,2,0,1033,Not found or hard deleted
+systemuser,caltype,0,0,1033,Professional
+systemuser,caltype,1,0,1033,Administrative
+systemuser,caltype,2,0,1033,Basic
+systemuser,caltype,3,0,1033,Device Professional
+systemuser,caltype,4,0,1033,Device Basic
+systemuser,caltype,5,0,1033,Essential
+systemuser,caltype,6,0,1033,Device Essential
+systemuser,caltype,7,0,1033,Enterprise
+systemuser,caltype,8,0,1033,Device Enterprise
+systemuser,caltype,9,0,1033,Sales
+systemuser,caltype,10,0,1033,Service
+systemuser,caltype,11,0,1033,Field Service
+systemuser,caltype,12,0,1033,Project Service
+systemuser,defaultfilterspopulated,0,0,1033,No
+systemuser,defaultfilterspopulated,1,0,1033,Yes
+systemuser,deletedstate,0,0,1033,Not deleted
+systemuser,deletedstate,1,0,1033,Soft deleted
+systemuser,displayinserviceviews,0,0,1033,No
+systemuser,displayinserviceviews,1,0,1033,Yes
+systemuser,emailrouteraccessapproval,0,0,1033,Empty
+systemuser,emailrouteraccessapproval,1,0,1033,Approved
+systemuser,emailrouteraccessapproval,2,0,1033,Pending Approval
+systemuser,emailrouteraccessapproval,3,0,1033,Rejected
+systemuser,incomingemaildeliverymethod,0,0,1033,None
+systemuser,incomingemaildeliverymethod,1,0,1033,Microsoft Dynamics 365 for Outlook
+systemuser,incomingemaildeliverymethod,2,0,1033,Server-Side Synchronization or Email Router
+systemuser,incomingemaildeliverymethod,3,0,1033,Forward Mailbox
+systemuser,invitestatuscode,0,0,1033,Invitation Not Sent
+systemuser,invitestatuscode,1,0,1033,Invited
+systemuser,invitestatuscode,2,0,1033,Invitation Near Expired
+systemuser,invitestatuscode,3,0,1033,Invitation Expired
+systemuser,invitestatuscode,4,0,1033,Invitation Accepted
+systemuser,invitestatuscode,5,0,1033,Invitation Rejected
+systemuser,invitestatuscode,6,0,1033,Invitation Revoked
+systemuser,isactivedirectoryuser,0,0,1033,No
+systemuser,isactivedirectoryuser,1,0,1033,Yes
+systemuser,isdisabled,0,0,1033,Enabled
+systemuser,isdisabled,1,0,1033,Disabled
+systemuser,isemailaddressapprovedbyo365admin,0,0,1033,No
+systemuser,isemailaddressapprovedbyo365admin,1,0,1033,Yes
+systemuser,isintegrationuser,0,0,1033,No
+systemuser,isintegrationuser,1,0,1033,Yes
+systemuser,islicensed,0,0,1033,No
+systemuser,islicensed,1,0,1033,Yes
+systemuser,issyncwithdirectory,0,0,1033,No
+systemuser,issyncwithdirectory,1,0,1033,Yes
+systemuser,msdyn_gdproptout,0,0,1033,No
+systemuser,msdyn_gdproptout,1,0,1033,Yes
+systemuser,outgoingemaildeliverymethod,0,0,1033,None
+systemuser,outgoingemaildeliverymethod,1,0,1033,Microsoft Dynamics 365 for Outlook
+systemuser,outgoingemaildeliverymethod,2,0,1033,Server-Side Synchronization or Email Router
+systemuser,preferredaddresscode,1,0,1033,Mailing Address
+systemuser,preferredaddresscode,2,0,1033,Other Address
+systemuser,preferredemailcode,1,0,1033,Default Value
+systemuser,preferredphonecode,1,0,1033,Main Phone
+systemuser,preferredphonecode,2,0,1033,Other Phone
+systemuser,preferredphonecode,3,0,1033,Home Phone
+systemuser,preferredphonecode,4,0,1033,Mobile Phone
+systemuser,setupuser,0,0,1033,No
+systemuser,setupuser,1,0,1033,Yes

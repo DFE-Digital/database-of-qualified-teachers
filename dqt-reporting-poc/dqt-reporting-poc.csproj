@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <RootNamespace>dqt_reporting_poc</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.ServiceBus" Version="5.3.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Testing\" />
+    <None Remove="Database\" />
+    <None Remove="Database\dbo\" />
+    <None Remove="Database\dbo\Functions\" />
+    <None Remove="Database\dbo\Tables\" />
+    <None Remove="Database\dbo\Reference Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\DatabaseProjectdqt-dev-reporting-sql.sqlproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Testing\" />
+    <Folder Include="Database\" />
+    <Folder Include="Database\dbo\" />
+    <Folder Include="Database\dbo\Functions\" />
+    <Folder Include="Database\dbo\Tables\" />
+    <Folder Include="Database\dbo\Reference Data\" />
+  </ItemGroup>
+</Project>

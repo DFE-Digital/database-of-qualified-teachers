@@ -1,0 +1,43 @@
+CREATE TABLE [dbo].[dfeta_country] (
+    [Id]                            NVARCHAR (50)  NOT NULL,
+    [SinkCreatedOn]                 DATETIME2 (7)  NULL,
+    [SinkModifiedOn]                DATETIME2 (7)  NULL,
+    [statecode]                     INT            NULL,
+    [statuscode]                    INT            NULL,
+    [dfeta_eeacountry]              INT            NULL,
+    [dfeta_ottroutecountry]         INT            NULL,
+    [modifiedby]                    NVARCHAR (50)  NULL,
+    [modifiedby_entitytype]         NVARCHAR (50)  NULL,
+    [modifiedonbehalfby]            NVARCHAR (50)  NULL,
+    [modifiedonbehalfby_entitytype] NVARCHAR (50)  NULL,
+    [createdonbehalfby]             NVARCHAR (50)  NULL,
+    [createdonbehalfby_entitytype]  NVARCHAR (50)  NULL,
+    [organizationid]                NVARCHAR (50)  NULL,
+    [organizationid_entitytype]     NVARCHAR (50)  NULL,
+    [createdby]                     NVARCHAR (50)  NULL,
+    [createdby_entitytype]          NVARCHAR (50)  NULL,
+    [createdbyyominame]             NVARCHAR (50)  NULL,
+    [organizationidname]            NVARCHAR (50)  NULL,
+    [dfeta_countryid]               NVARCHAR (50)  NULL,
+    [dfeta_name]                    NVARCHAR (100) NULL,
+    [createdonbehalfbyyominame]     NVARCHAR (50)  NULL,
+    [modifiedonbehalfbyyominame]    NVARCHAR (50)  NULL,
+    [modifiedbyyominame]            NVARCHAR (50)  NULL,
+    [createdbyname]                 NVARCHAR (50)  NULL,
+    [versionnumber]                 INT            NULL,
+    [timezoneruleversionnumber]     NVARCHAR (50)  NULL,
+    [importsequencenumber]          NVARCHAR (50)  NULL,
+    [modifiedonbehalfbyname]        NVARCHAR (50)  NULL,
+    [modifiedbyname]                NVARCHAR (50)  NULL,
+    [modifiedon]                    DATETIME2 (7)  NULL,
+    [overriddencreatedon]           NVARCHAR (50)  NULL,
+    [dfeta_vieworder]               NVARCHAR (50)  NULL,
+    [utcconversiontimezonecode]     NVARCHAR (50)  NULL,
+    [createdonbehalfbyname]         NVARCHAR (50)  NULL,
+    [createdon]                     DATETIME2 (7)  NULL,
+    [dfeta_value]                   NVARCHAR (50)  NULL
+);
+
+
+GO
+
