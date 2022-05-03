@@ -15,6 +15,8 @@ An overview of the DES system, and how to combat synchronisation issues can be f
 
 The DES creates the initial data copy, and then dispatches queries to the SQL database to deal with the subsequent changes to entities.
 
+![Reporting Architecture Overview - As-Is](./images/dqt_reporting_as_is2.png)
+
 ![Reporting Architecture Overview - As-Is](./images/DQTReportingAsIs.png)
 
 ## To-be (Proposed)
