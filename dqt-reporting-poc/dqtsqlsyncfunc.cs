@@ -36,12 +36,9 @@ namespace tradigital.dqt.reporting
             return configuration.GetValue<string>(setting);
         }
 
-
         [FunctionName("dqtsqlsyncfunc")]
         public async Task Run([ServiceBusTrigger("dqtstream", subscriptionName, Connection = "dqtreppoc_SERVICEBUS")] string mySbMsg)
         {
-             /* localdebugsubscriber
-             /*_logger.LogInformation($"C# ServiceBus topic trigger function processed message: {mySbMsg}");*/
             dynamic lparsedmsg = JsonConvert.DeserializeObject(mySbMsg);
 
             _logger.LogInformation($" message name: {lparsedmsg.MessageName}");
@@ -64,22 +61,12 @@ namespace tradigital.dqt.reporting
 
                     sqlDictionary.Add(dKey, dValue);
 
-                    /*  foreach (KeyValuePair<string, dynamic> pair in sqlDictionary)
-                     {
-                         _logger.LogInformation("KEYVALUEPAIR: {0}, {1}", pair.Key, pair.Value.ToString());
-
-                     } */
-
                 }
                 string sQuery = "";
 
                 if (msgtype == "Create")
                 {
                     sQuery = $"insert into dbo.{entityName} (Id,{string.Join(",", sqlDictionary.Keys)} ) values (@Id,{string.Join(",", sqlDictionary.Keys.Select(k => $"@{k}"))})";
-                    if (entityName.ToLower() == "lead")
-                    {
-                        System.Diagnostics.Debugger.Break();
-                    }
                 }
                 else
                 {
@@ -88,8 +75,6 @@ namespace tradigital.dqt.reporting
 
                 _logger.LogInformation(sQuery);
 
-
-
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
                 builder.DataSource = _configuration.GetValue<string>("DataSource");
@@ -97,10 +82,8 @@ namespace tradigital.dqt.reporting
                 builder.Password = _configuration.GetValue<string>("Password");
                 builder.InitialCatalog = _configuration.GetValue<string>("InitialCatalog");
 
-
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
-
                     connection.Open();
 
                     using (SqlCommand command = new SqlCommand(sQuery, connection))
@@ -111,7 +94,11 @@ namespace tradigital.dqt.reporting
                             command.Parameters.AddWithValue($"@{key}", ((Newtonsoft.Json.Linq.JValue)sqlDictionary[key]).Value ?? System.DBNull.Value);
                         }
                         int rowsAffected = await command.ExecuteNonQueryAsync();
-
+                        if (rowsAffected == 0)
+                        {
+                            ///TODO: Do we throw this as an exception so that the message gets dead lettered?
+                            _logger.LogWarning($"An {msgtype} query returned 0 rows affected - an entity may not have been updated correctly.");
+                        }
                     }
                 }
             }
@@ -120,15 +107,10 @@ namespace tradigital.dqt.reporting
                 _logger.LogCritical(e.ToString());
                 throw e;
             }
-            _logger.LogInformation("Task Finished.");
-            Console.ReadLine();
         }
-
-
 
         private dynamic GetValueForAttribute(dynamic attribute)
         {
-
             if (attribute.value is Newtonsoft.Json.Linq.JValue)
             {
                 // Is Primitive, or Decimal, or String
@@ -142,14 +124,10 @@ namespace tradigital.dqt.reporting
                 }
                 else
                 {
-
                     return attribute.value.Id;
                 }
             }
-
-
         }
-
     }
 }
 
