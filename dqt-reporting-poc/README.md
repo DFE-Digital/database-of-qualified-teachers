@@ -17,7 +17,7 @@ The DES creates the initial data copy, and then dispatches queries to the SQL da
 
 ![Reporting Architecture Overview - As-Is](./images/dqt_reporting_as_is2.png)
 
-![Reporting Architecture Overview - As-Is](./images/DQTReportingAsIs.png)
+
 
 ## To-be (Proposed)
 
