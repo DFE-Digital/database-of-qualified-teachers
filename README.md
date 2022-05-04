@@ -1,6 +1,8 @@
-# Database of Qualified Teachers
+# Database of Qualified Teachers DfE Teacher Regulation Agency
 
-General repo for Database of Qualified Teachers (DQT) documentation and service components.
+This is a "general" repo for Database of Qualified Teachers (DQT) documentation and service components. The "DQT" is being transformed into discreet digital services. As a result large parts of the technical architecture are changing and the code base being re-factored and in many cases split into the relevant concerns. This means that there are a growing number of repo's that represent the individual digital services that represent the transformed TRA Digital Service suite. Please check below link for a full view of these repo's...
+
+## [Teacher Regulation Agency Repos](https://github.com/orgs/DFE-Digital/teams/tra-digital/repositories)
 
 Here you will find:
 
