@@ -1,35 +1,34 @@
-# Technical architecture - future phases
+# Technical Architecture Road Map
+All technical architecture changes are fundamentally driven by user needs. We take a user centred design approach. Many of the current services require transformation to meet current service needs and GDS digital standards. While we can't let technology alone drive change we have identified a number of strategic milestones we are aiming to deliver in the next 2 years.
 
-The service team has identified a way forward in improving the current Teacher Status API currently served to two external teams in Teacher Services.
+## Planned work in 2022
+## Implement Continuous Integration
+1. All code under source control and made public in [DfE Repos](https://github.com/orgs/DFE-Digital/teams/tra-digital/repositories) Done Jan 2022
 
-The API, as it stands, does not have a consolidated service definition behind it. It merely supports existing business processes without considering who its users would be and what their needs are.
+## Implement Dev Ops
+1. Create deployment pipelines for all of the DQT technical architecture. Ongoing
+2. Implement better monitoring and hook into digital tools channels. E.g. [Paas Monitoring](https://github.com/DFE-Digital/tra-paas-monitoring). Ongoing
 
-The API source code is currently held in Azure DevOps. It is deployed into a Policy within the DfE Enterprise API Management tool, acting as a facade to transform incoming and outgoing requests.
+## Improving data integration by reducing file based DQT data integration and replacing with API based integration
+1. Build new [Teacher Qualifications API](https://github.com/DFE-Digital/qualified-teachers-api). Done Live Feb 2022
+2. [Register Trainee Teachers](https://www.register-trainee-teachers.education.gov.uk/), [Continuing Professional Development](https://manage-training-for-early-career-teachers.education.gov.uk/) and Claim Additional Teacher Payments integrated via qualified teacher data from new endpoints. Done Live March 2022
+3. Build new "TRN less" integration with [Continuing Professional Development](https://manage-training-for-early-career-teachers.education.gov.uk/). This is the first delivery that starts to improve the way in which DfE digital services integrate teacher records, so that we can:
+    Help Teachers by reducing the amount of times we ask them for thier information.
+    Better inform policy by more accurately identifying Teachers, Trainees and Applicants across the DfE Teacher Service Line.
 
-We want to move the API out of EAPIM into its separate application container for multiple reasons:
+## Building new services to address user needs
 
-* Our service doesn't need an API Management tool yet. Our API definitions are not mature yet, and we need to have extensive user research and analysis on the underlying data and its use. Having a centralised place, managed by a different team, sitting in between our service and our client would get in the way and slow things down at this stage. We also have engineering experts and in house API and security knowledge and skillset to handle the integration with the only two services that need our API.
-* Our use case is pretty simple. We want to provide qualified teacher data to other services. The semantic of such data, the way it's transformed, updated and presented to these's services users, is different and hence delegated.
-* Building a complex centralised communication tool that runs logic to route and manipulate messages is an architectural anti-pattern that tends to cause problems later on. Instead, microservices favour a decentralised approach.
-* Our service doesn't need analytics on the API at this stage. Our only identified API clients are service teams who need data to support internal business operations. We are not planning to expose data to external users just yet.
+1. Build new [Find a lost TRN Service](). To help users find their Teacher Reference Number quickly and digitally. Done Live May 2022
+2. Build new Professional Recognition digital service. This will replace the existing .Net view "portal" with a fully accessible public [digital service](https://docs.google.com/drawings/d/1S-YDJgEdGv-53tEEfNN9_ivghyPxuDtfrojbK866ns8/edit?skip_itp2_check=true&pli=1) 
 
-## Phase 1
-Lift and shift of the current EAPIM API into a separate component.
+## Overall themes
 
-![](images/c4/c4-dqt-future-phases-1.png)
+1. Automate as much as possible through CI and CD pipelines.
+2. Reduce manual intervention in data integrations by removing file / manual based with API's.
+3. Monitor performance, security / access, errors and publish into actively managed channels.
+4. Re-factor existing brittle code by strangulation.
+5. Open source everything (except secrets etc.)
+6. Simplify the technical architecure and reduce legacy technology footprint.
+7. Stop collecting unessessary data.
+8. Make our data more useable by removing duplications, streamlining data sets and better sharing with related DfE services.
 
-1. Build new qualified teacher RESTful API application
-1. CPD and Claim to consume qualified teacher data from new endpoints
-1. Remove EAPIM API
-
-## Phase 2
-Migrate legacy system data exchanges, currently working through emails and files, to the new DQT API.
-
-The development of future endpoints is subject to a more mature service (or services) definition.
-
-![](images/c4/c4-dqt-future-phases-2.png)
-
-1. Incrementally build new endpoints for services communication
-1. Have services interact with new API application
-1. Remove SFTP server
-1. Remove SSIS Server
