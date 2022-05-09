@@ -19,5 +19,6 @@ The DQT has relationships with the following services and systems:
 * DfE Azure Platform
 * MS Dynamics 365
 * Globalscape EFT
-* Teacher Claim (via EAPIM API)
-* Teacher CPD (via EAPIM API)
+* Teacher Claim (via Qualifications API)
+* Teacher CPD (via Qualifications API)
+* Register
