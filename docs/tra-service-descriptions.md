@@ -16,10 +16,10 @@ The services and systems include:
 
 * The [TRA web portals](https://teacherservices.education.gov.uk/) are built using .Net and consist of six user interfaces that are accessed externally by teachers and schools/employers and training providers to view and/or provide details of teachers, their qualifications and eligibility.
 
-* SFTP and SSIS systems. Together the SFTP and SSIS server allow data files to be received from different services (Capita, DMS, GIAS, GTC Wales, NPQ). Data is then extracted, transformed, and stored within staging tables before being loaded into the CRM at scheduled times.
+* SFTP and SSIS systems. Together the SFTP and SSIS server allow data files to be received from different services (Capita, GIAS, GTC Wales, NPQ). Data is then extracted, transformed, and stored within staging tables before being loaded into the CRM at scheduled times.
 
 * TRA Reporting service. The data export service provides TRA with reporting capabilities by replicating data from the Dynamics 365 CRM into a separate SQL Database. The system synchronises the entire data for selected entities and keeps them synched continuously as changes occur in the system.
 
-* EAPIM API. This API was developed to meet the needs of the Claim and CPD digital teams. It was developed by the Solutions Delivery Team (SDT) and is managed by them. The EAPIM API is not extensible and so a more strategic and flexible API is being developed to meet a wider set of user needs.
+* Qualifications API - this v3 API is currently being developed by the TRA Systems Development team to better meet the existing data needs of the CPD and Claim digital services, but without being developed within the EAPIM framework. It is being hosted in GOV.UK PaaS. A more strategic v4 API will quickly be developed to meet the data needs of the wider digital services.
 
-* TRA API - this v3 API is currently being developed by the TRA Systems Development team to better meet the existing data needs of the CPD and Claim digital services, but without being developed within the EAPIM framework. It is being hosted in GOV.UK PaaS. A more strategic v4 API will quickly be developed to meet the data needs of the wider digital services.
+* [Find a Lost Teacher Reference Number (TRN)](https://find-a-lost-trn.education.gov.uk/start) is a public facing digital service that allows anyone to find their TRN without calling the Teacher Regulation Agency help desk. 
