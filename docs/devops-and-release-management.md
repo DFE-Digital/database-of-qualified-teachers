@@ -2,11 +2,8 @@
 
 This section outlines the deployment mechanisms for the TRA services.
 
-**Note**: the EAPIM API is managed and maintained by the Solutions Delivery Team who have their own deployment process.
 
-## TRA deployment process
-
-Systems and services managed by the TRA System Development team will handle deployments as follows:
+## TRA deployment process (Teacher Self Serve, Employer Portals, ITT Providers and Teachers outside England and Wales)
 
 * GitHub branches (Push) deployed to DEV environment
     * Tests (unit tests, component tests, regression tests, coverage and code security scan) are completed
@@ -25,8 +22,11 @@ Systems and services managed by the TRA System Development team will handle depl
 
     * Once approved following peer review, the code is deployed to PROD
 
+[Find a lost TRN](https://teacher-services-tech-docs.london.cloudapps.digital/#find-a-lost-trn)
+[Qualified Teachers API](https://teacher-services-tech-docs.london.cloudapps.digital/#qualified-teachers-api)
+
 ## Access management
 
 TRA developers alone have access to application code via GitHub, with separation between the DEV and PROD environments.
 
-Digital Tools Support are responsible for providing appropriate levels of access and revoking when the developers are off-boarded.
+

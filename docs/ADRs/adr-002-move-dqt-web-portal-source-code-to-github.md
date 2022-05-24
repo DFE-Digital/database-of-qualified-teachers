@@ -1,9 +1,10 @@
 # 002 - Move DQT Web Portal source code from Azure Devops to Github
 
 **Date: 28-10-2021**
+**Date: 06-05-2022**
 
 ## Status
-**Proposed**
+**Accepted**
 
 ## Context
 The current DQT Web Portal source code is kept in Azure DevOps within the Tier 1 DfE subscription. Even though Azure DevOps provides a set of tools necessary for hosting source code, implementing continuous integration, delivery and testing workflows, Github provides a much more developer friendlier experience.

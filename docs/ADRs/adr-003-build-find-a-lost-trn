@@ -1,0 +1,13 @@
+Build Find a Lost TRN Servivce
+Accepted 06/05/2022
+
+
+Context
+In order to reduce TRA contact centre calls and enable citezens (who have a TRN - Teacher Reference Number), an easy way to find their TRN.
+
+Decision
+We will build a Ruby on Rails Monolith web site on Gov.uk to GDS standards.
+
+Consequences
+Calls to the TRN will reduce.
+Better user experience, as the service will be very quick and simple to use.
