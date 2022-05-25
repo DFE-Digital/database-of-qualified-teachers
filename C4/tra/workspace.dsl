@@ -6,7 +6,7 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
     model {
         enterprise "Enterprise" {
             DatabaseofQualifiedTeachers = softwareSystem "Database of Qualified Teachers" "The DQT is a Customer Relationship Management (CRM) system containing records of all TRN holders in England and Wales" {
-                CRM = container "CRM" "The main component of the DQT application" "Dynamics 365" 
+                CRM = container "CRM" "The main component of the DQT application" "Dynamics 365 SAAS" 
                 ReportingDatabase = container "Reporting Database" "" "SQL Server" "Database" 
                 Fileserver = container "File server" "Secure FTP Server allowing file exchange across applications" "SFTP Server" "Database" 
                 TeacherstatusAPI = container "Teacher status API" "An API layer customised for CPD and Claim" "DfE EAPIM API" "RoundedBox" {
@@ -28,7 +28,7 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
                     DQTHESAexportinterface = component "DQT - HESA export interface" "TRNs exports to HESA" "" "Pipe" 
                     DQTCAPITAinterface = component "DQT - CAPITA interface" "TRNs export" "" "Pipe" 
                     Trainingproviderinterface = component "Training provider interface" "Allow bulk uploads of trainee teachers" "" "Pipe" 
-                    DQTDMSInterface = component "DQT - DMS Interface" "Data import from DTTP" "" "Pipe" 
+                    #DQTDMSInterface = component "DQT - DMS Interface" "Data import from DTTP" "" "Pipe" 
                     DQTGTCWINTERFACE = component "DQT - GTCW INTERFACE" "General Teaching Council for Wales import of QTSs and Induction data" "" "Pipe" 
                     DQTNPQInterface = component "DQT- NPQ Interface" "National professional data import" "" "Pipe" 
                     DQTEDUBASEInterface = component "DQT - EDUBASE Interface" "GiAS data import" "" "Pipe" 
@@ -157,6 +157,7 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
 
     views {
         systemLandscape "TeacherServicesLandscape" {
+            
             include DatabaseofTeacherTraineesProviders 
             include DatabaseofQualifiedTeachers 
             include DisclosureandBarringService 
@@ -188,10 +189,14 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
             include Partecipants 
             include SchoolUsers 
             include Getinformationaboutschools 
-            include DfESignIn 
+            include DfESignIn
+            
+            autolayout lr
         }
 
         systemContext DatabaseofQualifiedTeachers "DQTSystemContext" {
+           
+
             include DatabaseofTeacherTraineesProviders 
             include DatabaseofQualifiedTeachers 
             include DisclosureandBarringService 
@@ -210,9 +215,13 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
             include TeacherMisconductService 
             include HigherEducationStatisticsAgency 
             include DfESignIn 
+
+            autolayout lr
         }
 
         container DatabaseofQualifiedTeachers "NewDQTAPIContainer" {
+            
+
             include DatabaseofTeacherTraineesProviders 
             include DisclosureandBarringService 
             include EducationWorkforceCouncilWales 
@@ -234,9 +243,13 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
             include ClaimAdditionalPaymentsforTeaching 
             include HigherEducationStatisticsAgency 
             include DfESignIn 
+            
+            autolayout lr
         }
 
         container TeacherMisconductService "TMSContainer" {
+            
+
             include TeacherMisconductService.TMSDynamics365CRM 
             include TeacherMisconductService.PanellistPortal 
             include TeacherMisconductService.MicrosoftSharepoint 
@@ -244,9 +257,13 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
             include TMSBAUTeam 
             include Teachers 
             include TeacherPanellist 
+
+            autolayout lr
         }
 
         container DatabaseofQualifiedTeachers "TraDQTContainers" {
+            
+
             include DatabaseofTeacherTraineesProviders 
             include DisclosureandBarringService 
             include EducationWorkforceCouncilWales 
@@ -269,9 +286,13 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
             include ClaimAdditionalPaymentsforTeaching 
             include HigherEducationStatisticsAgency 
             include DfESignIn 
+
+            autolayout lr
         }
 
         component DatabaseofQualifiedTeachers.WebPortal "DQTPortalComponents" {
+            
+
             include DatabaseofQualifiedTeachers.ReportingDatabase 
             include DatabaseofQualifiedTeachers.WebPortal.AppropriateBodyportal 
             include DatabaseofQualifiedTeachers.WebPortal.EmployerPortal 
@@ -284,20 +305,26 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
             include HEIsTeacherTraineeProvider 
             include Organisations 
             include Teachers 
-            include DfESignIn 
+            include DfESignIn
+
+            autolayout lr
         }
 
         component DatabaseofQualifiedTeachers.ETL "DataInterfaceComponents" {
+           
+
             include DatabaseofQualifiedTeachers.ReportingDatabase 
             include DatabaseofQualifiedTeachers.Fileserver 
             include DatabaseofQualifiedTeachers.ETL.DQTHESAimportinterface 
             include DatabaseofQualifiedTeachers.ETL.DQTHESAexportinterface 
             include DatabaseofQualifiedTeachers.ETL.DQTCAPITAinterface 
             include DatabaseofQualifiedTeachers.ETL.Trainingproviderinterface 
-            include DatabaseofQualifiedTeachers.ETL.DQTDMSInterface 
+            #include DatabaseofQualifiedTeachers.ETL.DQTDMSInterface 
             include DatabaseofQualifiedTeachers.ETL.DQTGTCWINTERFACE 
             include DatabaseofQualifiedTeachers.ETL.DQTNPQInterface 
             include DatabaseofQualifiedTeachers.ETL.DQTEDUBASEInterface 
+            
+            autolayout lr
         }
 
         styles {
@@ -343,6 +370,7 @@ workspace "TRA Workspace" "The system context diagram for my software system." {
                 # empty style 
             }
         }
+       
 
     }
 

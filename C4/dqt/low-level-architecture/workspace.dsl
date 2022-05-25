@@ -1,20 +1,14 @@
-workspace "DQT" "DQT Deployment Architecture" {
+workspace "TRA" "TRA TQ Unit Deployment Architecture" {
     ## *************************************************************************************************************************************************************
-    ## DO NOT STORE IN GIT HUB THIS HAS SENSITIVE NETWORK INFORMATION
-    ## STORE HERE: https://drive.google.com/drive/folders/1UneNM3VZwtdEZFvB6uNPpVS2MELGZhE0?ths=true
-    ## Last Update: 08/03/2022
     ## To install structurizr see: https://structurizr.com/help/getting-started
     ## docker run -it --rm -p 8080:8080 -v [PATH TO workspace.dsl]:/usr/local/structurizr structurizr/lite
     ## *******************************************************************
-    ## ******************************************************************* PRODUCTION *******************************************************************************
+    ## ******************************************************************* PRODUCTION ENV VIEW *******************************************************************************
     ##  NON - SENSITIVE
 
     model {
         
-          testers  = group "Testers" {
-            internaltesters = person "Internal Testers"
-            pentesters = person "Penetration Testers"
-        }
+          
 
         dqt = softwaresystem "DQT" "Allows Teacher Regulation Agency to regulate teaching profession" "Collection of various technologies" {
             webApplication = container "Web Application" "Allows Teachers, Employers to access TRA services via portals" ".Net 4, SQL/SSIS"
@@ -28,30 +22,39 @@ workspace "DQT" "DQT Deployment Architecture" {
         prod = deploymentEnvironment "Prod" {
             
             deploymentNode "Users" "" "" "" {
-                            usrcontainer1 = containerInstance usrcontainer  
+                            #usrcontainer1 = containerInstance usrcontainer  
+                            internaldfeusers = infrastructureNode "Internal DfE Users" "Services hosted within Corporate Network" "" ""
+                            crmusers = infrastructureNode "D365 CRM Users" "DQT CRM (MS SAAS hosted on the internet)" " " "https"
+                            legacyportalusers = infrastructureNode "DQT Portals https://teacherservices.education.gov.uk" "DQT Legacy Service Portals" "https" " "
+                            dfeservices = infrastructureNode "DfE Service Integration (API)" "Register for ITT, CPD, Apply For Teacher Training" "REST API" "https"
+                            externalfileintegrationusers = infrastructureNode "External Bodies (File Integration)" "SFTP" "" ""
+                            digitalservicesusers = infrastructureNode "TRA Digital Services" "Find-a-lost-trn" "" "https"
                         }
 
             deploymentNode "On Premise Network" "" "" "Microsoft Azure - Virtual Networks (Classic)" {
                 expressroute = infrastructureNode "Express Route" "" "" "Microsoft Azure - ExpressRoute Circuits"
+                powerBi = infrastructureNode "Power BI Reports​" "Collection of Power BI reports over CRM Export Database" "" "Microsoft Azure - Cloud Services (Classic)"
+                sqlsvrmt18 = infrastructureNode "SQL Server Management Tools v2018​" "Locally installed SQL Server MAnagement Tools 2018" "" "Microsoft Azure - Cloud Services (Classic)"
+                sqlsvrmt16 = infrastructureNode "SQL Server Management Tools​ v2016" "Locally installed SQL Server MAnagement Tools 2016" "" "Microsoft Azure - Cloud Services (Classic)"
                  
             }
            
             deploymentNode "DfE Sign In" "" "" "Secure Access Web Site" {
-                dfesign = infrastructureNode "Dfe Sign Web App" "" "" "Microsoft Azure - Web Environment"
+                dfesign = infrastructureNode "Dfe Sign" "" "OrganisationIDAM" "Microsoft Azure - Web Environment"
                  
             }
 
-            deploymentNode "Internet" "" "" "Microsoft Azure - Website Power" {
-                internetconnection = infrastructureNode "Public Internet" "" "" "Microsoft Azure - Website Power"
-                 
-            }
+            
            
             deploymentNode "GovPaas" "" "" "Amazon Web Services - CloudFront" {
                 dqtapipostgres = infrastructureNode "DQT API DB" "" "" "Amazon Web Services - RDS PostgreSQL instance"
-                dqtapi = infrastructureNode "DQT API .Net Application" "" "" "Amazon Web Services - EC2"
+                dqtapi = infrastructureNode "Qualified Teachers API .Net Core ASP.Net Application" "" "" "Amazon Web Services - EC2"
                 findtrn = infrastructureNode "Find a lost TRN Service" "Ruby on Rails Web Application" " https://find-a-lost-trn.education.gov.uk" "Amazon Web Services - CloudFront"
                 findtrndb = infrastructureNode "Find a lost TRN Database" "Postgres" "Local database" "Amazon Web Services - RDS PostgreSQL instance"
-                 
+                traroute53 = infrastructureNode "AWS Route53 education.gov.uk" "DNS Zone" "AWS Issued Cert" "Amazon Web Services - EC2"
+                tracloudfront = infrastructureNode "Cloudfront" "" "" "Amazon Web Services - EC2"
+                cdnroute = infrastructureNode "CDN Route" "[service-name]-cdn-production" "" "Amazon Web Services - EC2"
+                
             }
 
             deploymentNode "D365" "" "" "Microsoft Azure - Virtual Networks (Classic)" {
@@ -60,44 +63,44 @@ workspace "DQT" "DQT Deployment Architecture" {
             }
 
             
-
             deploymentNode "Microsoft Azure DfE Tennancy" "Subscription T1" "" "Microsoft Azure - Virtual Networks" {
                 
                 greenzone = deploymentNode "Production Green Zone Vnet:  AD.HQ.DEPT" "" "" "Microsoft Azure - Azure Active Directory"{
-                        baracudafw = infrastructureNode "Barracuda Firewall SHARED" "" "" "Microsoft Azure - Firewalls"
-                        baracudafwruleset = infrastructureNode "Barracuda (NF) Firewall Rules" "" "" "Microsoft Azure - Web Application Firewall Policies(WAF)"
-                            
-                        greensubnet = deploymentNode "Subnet snet-t-t1pr-data " "" "" "Microsoft Azure - Virtual Networks"{
-                                ssisrepbuilder = infrastructureNode "SQL Report Builder VMT1PR-DQT-SQL2 (AD admin account) " "Windows Server 2016" "" "Microsoft Azure - SSIS Lift And Shift IR"
-                                powerBi = infrastructureNode "Power BI Reports​" "Collection of Power BI reports over CRM Export Database" "" "Microsoft Azure - Cloud Services (Classic)"
-                                sqlsvrmt18 = infrastructureNode "SQL Server Management Tools v2018​" "Locally installed SQL Server MAnagement Tools 2018" "" "Microsoft Azure - Cloud Services (Classic)"
-                                sqlsvrmt16 = infrastructureNode "SQL Server Management Tools​ v2016" "Locally installed SQL Server MAnagement Tools 2016" "" "Microsoft Azure - Cloud Services (Classic)"
-                                deploymentNode "AzureSQL PAAS" "Azure SQL PAAS" "Shared PAAS (other DB's outside of DQT)" "Microsoft Azure - Azure SQL" {
-                                extractdatabaseInstance = containerInstance ssisstagedb
-                            }
-                            
-                        }
-                        
+                    
+                        crmtelemetry = infrastructureNode "CRM telemetry Application Insights" "" "" "Microsoft Azure - Application Insights"
+                        webservicestelemetry = infrastructureNode "Web Service telemetry Application Insights" "" "" "Microsoft Azure - Application Insights"
+                        integrationtelemetry = infrastructureNode "Integration telemetry Application Insights" "" "" "Microsoft Azure - Application Insights"
+                        ssisrepbuilder = infrastructureNode "SQL Report Builder VMT1PR-DQT-SQL2" "Windows Server 2016, Subnet snet-t-t1pr-data" "" "Microsoft Azure - SSIS Lift And Shift IR"
 
                     }
 
-                redzone = deploymentNode "Production Red Zone VNet" "VNet" "" "Microsoft Azure "{
-                      
-                        apploadbalancer = infrastructureNode "ALB (Application Load Balancer)" "SHARED Load Balancer" "" "Microsoft Azure - Load Balancers"
-                        checkpointfw = infrastructureNode "Palo Alto Firewall" "Firewall" "" "Microsoft Azure - Firewalls"
+                redzone = deploymentNode "Production Red Zone VNet" "VNet" "T1 Subscription" "Microsoft Azure "{
+                        baracudafwruleset = infrastructureNode "Barracuda (NF) Firewall Rules" "" "" "Microsoft Azure - Web Application Firewall Policies(WAF)"
+                        # apploadbalancer = infrastructureNode "ALB (Application Load Balancer)" "SHARED Load Balancer" "" "Microsoft Azure - Load Balancers"
+                        checkpointfw1 = infrastructureNode "Palo Alto Firewall 1" "Firewall" "" "Microsoft Azure - Firewalls"
+                        checkpointfw2 = infrastructureNode "Palo Alto Firewall 2" "Firewall" "" "Microsoft Azure - Firewalls"
                         checkpointfwuleset = infrastructureNode "Palo Alto Firewall Rules" "WAF Policies" "" "Microsoft Azure - Web Application Firewall Policies(WAF)"
-                        waf = infrastructureNode "WAF Firewall" "Firewall" "" "Microsoft Azure - Firewalls"
+                        waf1 = infrastructureNode "Baracuda WAF 1" "Firewall" "" "Microsoft Azure - Firewalls"
+                        waf2 = infrastructureNode "Baracuda WAF 2" "Firewall" "" "Microsoft Azure - Firewalls"
                         wafwuleset = infrastructureNode "WAF Firewall Rules" "" "" "Microsoft Azure - Web Application Firewall Policies(WAF)"
-                            
-                        redsubnet1 = deploymentNode "Subnet: snet-??? [TBC]" "" "" "Microsoft Azure - Virtual Networks"{
+                        azurepublicip = infrastructureNode "Azure Public IP" "40.68.254.32" "" "Microsoft Azure - Firewalls"
+                        azureexternallb = infrastructureNode "Azure External Load Balancer" "Balances Palo Alto FW's" "" "Microsoft Azure - Firewalls"
+                        azureinternallb = infrastructureNode "Azure Internal Load Balancer" "Balances Baracuda WAF's" "" "Microsoft Azure - Firewalls"
+
+                        deploymentNode "AzureSQL PAAS" "Azure SQL PAAS" "Shared PAAS (other DB's outside of DQT)" "Microsoft Azure - Azure SQL" {
+                                extractdatabaseInstance = containerInstance ssisstagedb
+                            }
+
+                         sftpserver = infrastructureNode "DQT SFTP Server VMT1PR-DQT-SFTP  Globalscape SFTP" "Globalscape EFT Server" "" "Microsoft Azure - VM Images (Classic)"
+                       
                                 #••••••••••Q: What is running on this server? 
-                                dqtiiswebapp1 = infrastructureNode "Web Portal Server 1 (iis) VMT1PR-DQT-IIS1" "Windows Server 2016" "" "Microsoft Azure - VM Images (Classic)"
+                                dqtiiswebapp1 = infrastructureNode "Web Portal Server 1 (iis) DQT Portals" "Windows Server 2016, https://teacherservices.education.gov.uk/" "" "Microsoft Azure - VM Images (Classic)"
                                 #••••••••••Q: What is running on this server? 
-                                dqtiiswebapp2 = infrastructureNode "Web Portal Server 2 (iis) VMT1PR-DQT-IIS2" "Windows Server 2016" "" "Microsoft Azure - VM Images (Classic)"
-                                dqtportalwebsite = infrastructureNode "DQT External Web Site" "https://teacherservices.education.gov.uk/" "Employer Access, Teacher Self Serve, Professional Recognition, Appropriate Bodies, ITT providers" "Microsoft Azure - Web Environment"
+                                dqtiiswebapp2 = infrastructureNode "Web Portal Server 2 (iis) DQT Portals" "Windows Server 2016, https://teacherservices.education.gov.uk/" "" "Microsoft Azure - VM Images (Classic)"
+                                #dqtportalwebsite = infrastructureNode "DQT External Web Site" "https://teacherservices.education.gov.uk/" "Employer Access, Teacher Self Serve, Professional Recognition, Appropriate Bodies, ITT providers" "Microsoft Azure - Web Environment"
 
                                 #••••••••••Q: What is running on this server? 
-                                fileintegration = deploymentNode "File Integration" {
+                                #fileintegration = deploymentNode "File Integration" {
                                     ssisscheduler = deploymentNode "VMT1PR-DQT-SSIS SQL Server Integration Services (SSIS) for DQT interfaces" "Windows Server 2016" "" "Microsoft Azure - SSIS Lift And Shift IR"{
 
                                         ssisabimport = infrastructureNode "DQT AB Import" "SSIS scheduled job" "vmt1dvdqtmgsis" "Microsoft Azure - SSIS Lift And Shift IR"
@@ -132,42 +135,40 @@ workspace "DQT" "DQT Deployment Architecture" {
                                     }
                                     
                                     
-                            }
+                            
                                 
-                            }
-                        redsubnet2 = deploymentNode "Subnet: snet-?? [TBC]" "" "" "Microsoft Azure - Virtual Networks"{
-                                sftpserver = infrastructureNode "DQT SFTP Server VMT1PR-DQT-SFTP  Globalscape SFTP" "Globalscape EFT Server" "" "Microsoft Azure - VM Images (Classic)"
+                            #}
+                        
+                               
                                 
                                 
-                            }
+                           
                             
                             
                         }
                         
-                telemetry = deploymentNode "Telemetry" "" "" "Microsoft Azure Actvity Log Services Application Insights"{
-                        crmtelemetry = infrastructureNode "CRM telemetry Application Insights" "" "" "Microsoft Azure - Application Insights"
-                        webservicestelemetry = infrastructureNode "Web Service telemetry Application Insights" "" "" "Microsoft Azure - Application Insights"
-                        integrationtelemetry = infrastructureNode "Integration telemetry ? Application Insights" "" "" "Microsoft Azure - Application Insights"
-                            
-                        }
+              
                     
             }
 
-            # Relationships
-
-            expressroute -> baracudafw
-            baracudafw -> ssisrepbuilder
-            ssisrepbuilder -> baracudafw "Requests to SQL PAAS" "HTTPS ? [TBC]"
-            baracudafw -> extractdatabaseInstance "Requests from SSIS Report Builder VMT1PR-DQT-SQL2" "HTTPS ? [TBC]"
+            # TBC on this section
+            expressroute -> waf1
+            expressroute -> waf2
+            waf1 -> ssisrepbuilder
+            waf2 -> ssisrepbuilder
+            waf1 -> extractdatabaseInstance "Requests from SSIS Report Builder VMT1PR-DQT-SQL2" "HTTPS ? [TBC]"
+            waf2 -> extractdatabaseInstance "Requests from SSIS Report Builder VMT1PR-DQT-SQL2" "HTTPS ? [TBC]"
             #firewall rules
-            baracudafwruleset -> baracudafw "Controls access rules"
-            checkpointfwuleset -> checkpointfw "Controls access rules"
-            wafwuleset -> waf "Controls access rules"
+            baracudafwruleset -> waf1 "Controls access rules"
+            baracudafwruleset -> waf2 "Controls access rules"
+            checkpointfwuleset -> checkpointfw1 "Controls access rules"
+            checkpointfwuleset -> checkpointfw2 "Controls access rules"
+            wafwuleset -> waf1 "Controls access rules"
+            wafwuleset -> waf2 "Controls access rules"
             #expressroute -> elb 
             #elb -> webApplicationInstance "Forwards requests to" "https"
-            usrcontainer1 -> expressroute "Uses corporate network"
-            usrcontainer1 -> internetconnection "Uses"
-            internetconnection -> dqtd365 "Uses internet" "https"
+            #usrcontainer1 -> expressroute "Uses corporate network"
+           
             # D365 data exports
             dataexportservice -> dqtd365 "Exports data"
             dataexportservice -> extractdatabaseInstance "Pushes data to service Public IP address whitelisted as a standard route in PAAS"
@@ -180,10 +181,18 @@ workspace "DQT" "DQT Deployment Architecture" {
 
 
             # Red Zone
-            apploadbalancer -> checkpointfw
-            checkpointfw -> waf
-            waf -> dqtiiswebapp1
-            waf -> dqtiiswebapp2
+            azurepublicip -> azureexternallb "Front end pool"
+            azureexternallb -> checkpointfw1 "Back end pool"
+            azureexternallb -> checkpointfw2 "Back end pool"
+            checkpointfw1 -> azureinternallb "NAT Rules"
+            checkpointfw2 -> azureinternallb "NAT Rules"
+            azureinternallb -> waf1 "Balances WAF's"
+            azureinternallb -> waf2 "Balances WAF's"
+            waf1 -> dqtiiswebapp1 "Balances Application"
+            waf1 -> dqtiiswebapp2 "Balances Application"
+            waf2 -> dqtiiswebapp1 "Balances Application"
+            waf2 -> dqtiiswebapp2 "Balances Application"
+            
             dqtiiswebapp1 -> ssisscheduler
             dqtiiswebapp2 -> ssisscheduler
             ssisscheduler -> sftpserver
@@ -194,30 +203,39 @@ workspace "DQT" "DQT Deployment Architecture" {
             # telemetry
             dqtiiswebapp1 -> webservicestelemetry
             dqtiiswebapp2 -> webservicestelemetry
-            dqtiiswebapp1 -> dqtportalwebsite "Hosts"
-            dqtiiswebapp2 -> dqtportalwebsite "Hosts"
+            
 
             dqtd365 -> crmtelemetry
             ssisscheduler -> integrationtelemetry
             # External user connections
-            usrcontainer1 -> internetconnection "None DfE Sign route: External users "
-            usrcontainer1 -> internetconnection "DfE Sign route: External users"
-            internetconnection -> dfesign "DfE Sign route"
-            dfesign -> apploadbalancer "DfE Sign route https://teacherservices.education.gov.uk "
-            internetconnection -> apploadbalancer "https://teacherservices.education.gov.uk "
-            internetconnection -> sftpserver "Accessed via"
-            # data provider
-            usrcontainer1 -> internetconnection "Data Provider"
-            internetconnection -> apploadbalancer "https://teacherservices.sftp.education.gov.uk "
-            # hesa
-            usrcontainer1 -> internetconnection "Hesa"
-            internetconnection -> apploadbalancer "datacollection.hesa.ac.uk "
+           
+            dfesign -> azurepublicip "DfE Sign route https://teacherservices.education.gov.uk "
+
+            dfeservices -> traroute53 "DfE Service Integrations via API"
+            digitalservicesusers -> traroute53 "Citizens using TRA digital services"
+            legacyportalusers -> dfesign "DQT legacy portal users (redirect from https://teacherservices.education.gov.uk)"
+            dfesign -> azurepublicip "DfE Sign"
+            externalfileintegrationusers -> azurepublicip "External Bodies (legacy file integration)"
+            crmusers -> dqtd365 "DQT D3565 CRM Users"
+            internaldfeusers -> expressroute "Internal traffic to Azure Services"
+           
+            waf1 -> sftpserver "sftp traffic"
+            waf2 -> sftpserver "sftp traffic"
+           
+            
+
+
             # AWS
+           
             dqtapi -> dqtapipostgres
-            usrcontainer1 -> dqtapi "Internal service consumers via API key"
             dqtapi -> dqtd365 "Returns data from"
             findtrn -> dqtapi "Uses"
             findtrn -> findtrndb "Uses"
+            traroute53 -> tracloudfront "CNAME record"
+            tracloudfront -> cdnroute
+            cdnroute -> dqtapi
+            cdnroute -> findtrn
+
             # File integration
             ssisabimport -> consoleintegrationapp "Calls .exe "
             ssiscapitaexportamend -> consoleintegrationapp "Calls .exe "
@@ -257,20 +275,18 @@ workspace "DQT" "DQT Deployment Architecture" {
     views {
         deployment dqt "Prod" {
             include *
-            autolayout lr
+            autoLayout tb
 
-            animation {
+            #animation {
                 
-                expressroute
-                dqtd365
-                baracudafw
-                greensubnet
-                greenzone
-                redzone
-                extractdatabaseInstance
-                ssisrepbuilder
-                telemetry
-            }
+            #    expressroute
+            #    dqtd365
+             #   greenzone
+            #    redzone
+            #    extractdatabaseInstance
+            #    ssisrepbuilder
+                
+            #}
 
         }
 
