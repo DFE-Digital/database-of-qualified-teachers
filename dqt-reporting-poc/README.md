@@ -1,4 +1,50 @@
-# DQT Reporting Overview
+# DQT Reporting Proof Of Concept
+
+This folder houses the code for a working proof-of-concept that synchornises data between the DQT (build) and an instance of Azure SQL - so that reporting users can query DQT data using traditional SQL.
+
+## TLDR; Local set up
+
+### Prerequisites
+* [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
+* [Azure Functions Core Tools](https://github.com/Azure/azure-functions-core-tools)
+
+### How to run locally
+
+```
+cd dqt-reporting-poc
+func start
+```
+
+## Solution Components
+
+The solution consists of the following four components:
+
+### Azure Service Bus Topic
+
+Azure Service Bus Topics are an implementation of the pub/sub model.  We create a topic (A target for publishing events), and each topic can have zero or more configured subscriptions. We create a Shared Access Key with write permissions, and configure the DQT to write to this topic using the SAS Key with write access.
+
+### DQT (Dynamics 365 configuration)
+
+Microsoft Dynamics 365 has a built-in feature called Service Endpoint plugins.  One such plugin enables us to connect to an Azure Service Bus Topic, and publish events to it.  These events (Create, Update, Delete) contain information about the changes to the entity that the trigger is placed on.  In our PoC, we configured the build CRM with Create and Update on the contact entity, and configured the service bus as the target, using the SAS key configured as above
+
+![Service bus configuration](./images/servicebus.png)
+
+![Event trigger step configuration](./images/trigger.png)
+
+### Azure Function
+
+The Azure Function contains the logic that interprets the events from the DQT CRM into insert/update statements which are executed on the Azure SQL instance.  The function is written in C#, and is deployed using the dotnet deploy command.
+
+The function expects the following configuration values to be provided:
+
+* "dqtreppoc_SERVICEBUS" -  An service bus connection string, containing the SAS key
+* "targetdb" - A database connection string for the target Azure SQL instance
+
+### Azure SQL Instance
+
+The Azure SQL instance needs to be configured with the schema that matches the existing reporting database, as well as the functions that are commonly used by the various reports ran on the data.  The database schema create scripts  can be found in the Database folder.
+
+# Architectural Overview
 
 ## Background
 Reporting on DQT data is currently delivered via SSRS and PowerBI.  These reporting platforms connect to an Azure SQL database that is kept synchronised with DQ data via a Microsoft service called Data Export Service (DES).
