@@ -39,16 +39,6 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             # **********software system**********
             trasoftwareSystem = softwareSystem "TRA Software System" "A distibuted set of software containers that provide both internal and external facing services."{
                 # containers
-                findcont = container "Find-A-Lost-Trn Gov.Uk Web Application" "https://find-a-lost-trn.education.gov.uk/start" "Ruby on Rails" {
-                    # find a lost trn users
-                    qualifiedteacher -> this "https"
-                    traineeteacher -> this "https"
-                    citizen -> this "https"
-                    
-                    findrubyonrailsmonolith = component "find-a-lost-trn Monolith" "Find a lost TRN is a monolithic Rails app built with the GOVUK Design System and hosted on GOVUK PaaS." "Ruby 3.x,Node.js 16.x,Yarn 1.22.x,PostgreSQL 13.x,Redis 6.x"
-                
-                }
-                
                 qualifiedteachersapicont = container "Teacher Qualifications REST API" "qualified-teachers-api" ".Net API RESTful API for integrating with the Database of Qualified Teachers CRM" {
                     
                     # teacher qualifications api users
@@ -57,11 +47,35 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     
                 }
                 
-                dqtcrmcont = container "DQT CRM" "Database of qualified teachers CRM" "MS Dynamics 365 SAAS" {
+                
+                findcont = container "Find-A-Lost-Trn Gov.Uk Web Application" "https://find-a-lost-trn.education.gov.uk/start" "Ruby on Rails" {
+                    # find a lost trn users
+                    qualifiedteacher -> this "https"
+                    traineeteacher -> this "https"
+                    citizen -> this "https"
+                    this -> qualifiedteachersapi "uses"
+                    findrubyonrailsmonolith = component "find-a-lost-trn Monolith" "Find a lost TRN is a monolithic Rails app built with the GOVUK Design System and hosted on GOVUK PaaS." "Ruby 3.x,Node.js 16.x,Yarn 1.22.x,PostgreSQL 13.x,Redis 6.x"
+                    findrubyonrailsmonolith -> qualifiedteachersapi "https"
+                }
+                
+                d365cont = container "DQT CRM" "DQT D365 SAAS Service" "SAAS"{
+                    dqtcrm = component "CRM" "CRM instance providing customer relationship management and data store https://ent-dqt-prod.crm4.dynamics.com" "MS D365 SAAS"
+                    
+                
+                }
+                
+                dqtdevopscomponentscont = container "Azure DQT Dev Ops" "DQT Azure Dev Ops components" "Key vaults, Storage"{
+                    keyvault = component "KeyVault" "Key Vault" "Azure Key Vault"
+                    storageac = component "Storeage Account" "Storage Account" "Azure Storage Account"
+                    
+                
+                }
+                
+                dqtcrmcompcont = container "DQT Components" "Database of qualified teachers components" "IAAS components" {
                     # teacher qualifications api users
                     trauser -> this "https"
                     
-                    dqtcrm = component "CRM" "CRM instance providing customer relationship management and data store https://ent-dqt-prod.crm4.dynamics.com" "MS D365 SAAS"
+                    
                     msdataexportservice = component "MS Data Export Service" "D365 plugin data export service [End Of Life]" "MS D365 SAAS"
                     crmexportdatabase = component "CRM Data Copy" "Hot copy of CRM data" "SQLServer SQL instance, SSIS jobs"
                     sftpapp = component "SFTP Application" "SFTP File interface providing public end point for file import/export teacherservices-sftp.education.gov.uk" "Global scape SFTP"
@@ -73,17 +87,18 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     
                     
                     # crm component relationships
-                    msdataexportservice -> dqtcrm "plugs in to"
+                    
                     msdataexportservice -> crmexportdatabase "exports data to"
                     ssisjobs -> consoleapps "invokes" 
                     consoleapps -> sftpapp "imports/exports files to/from"
-                    consoleapps -> dqtcrm "reads/writes from/to"
-                    sqlsvrmt16 -> dqtcrm "reads/writes from/to"
-                    sqlsvrmt18 -> dqtcrm "reads/writes from/to"
-                    aspwebapp -> dqtcrm "reads/writes from/to"
-                    register -> qualifiedteachersapi "reads/writes from/to"
-                    claim -> qualifiedteachersapi "reads/writes from/to"
-                    cpd -> qualifiedteachersapi "reads/writes from/to"
+                    
+                    sqlsvrmt16 -> crmexportdatabase "reads/writes from/to"
+                    sqlsvrmt18 -> crmexportdatabase "reads/writes from/to"
+                    
+                    register -> qualifiedteachersapi "uses"
+                    claim -> qualifiedteachersapi "uses"
+                    cpd -> qualifiedteachersapi "uses"
+                    
                     hesa -> sftpapp "reads/writes from/to"
                     capitatps -> sftpapp "reads/writes from/to"
                     gias -> sftpapp "reads/writes from/to"
@@ -91,6 +106,14 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     aspwebapp -> dsi "authenticates with"
                     appropriatebody -> aspwebapp "uploads files to"
                 }
+                
+                
+                msdataexportservice -> dqtcrm "plugs in to"
+                consoleapps -> dqtcrm "reads/writes from/to"
+                aspwebapp -> dqtcrm "reads/writes from/to"
+                qualifiedteachersapi -> dqtcrm "reads/writes from/to"
+                keyvault -> qualifiedteachersapicont "stores secrets"
+                keyvault -> findcont "stores secrets"
                 
                 
                 
@@ -106,6 +129,42 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             noneschoolemployer -> trasoftwareSystem "https"
            
             findrubyonrailsmonolith -> zendesk "reads/writes from/to"
+            
+            
+        }
+        
+         deploymentEnvironment "Infrastructure High Level Deployment" {
+            deploymentNode "GovPaas" "Gov.Uk Hosting Service managed by GDS (Government Digital Services)" "AWS, CloudFront" {
+                deploymentNode "Gov.Uk Digital Service" "" "Ruby on Rails" {
+                    infrafindinstance = containerInstance findcont
+                }
+                deploymentNode "API Service" "" ".Net core" {
+                    infraapiinstance = containerInstance qualifiedteachersapicont
+                }
+                
+            }
+            
+            deploymentNode "Department For Education" "educationgovuk.onmicrosoft.com" "MS Azure T1" {
+                deploymentNode "DQT T1 Components" "" "IAAS VM's.Net 4, SQL,3rd Party Apps, SFTP, SSIS" {
+                    infrat1dqtinstance = containerInstance dqtcrmcompcont
+                }
+            }
+            
+            deploymentNode "DfE Platform Identity" "platform.education.gov.uk" "MS Azure CIP" {
+                deploymentNode "DQT CIP Components" "" "Key Vaults, Storage Accounts, Azure Service POCs" {
+                    infradevopsinstance = containerInstance dqtdevopscomponentscont
+                }
+                
+                
+            }
+            
+            deploymentNode "Microsoft Cloud" "SAAS" "MS Dynamics365 CRM" {
+                deploymentNode "DQT CRM" "" "Customer Relationship Management" {
+                    d365instance = containerInstance d365cont
+                }
+                
+                
+            }
         }
 
     }    
@@ -145,10 +204,18 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             autoLayout
         }
         
-        component dqtcrmcont "crmview" {
+        component dqtcrmcompcont "crmview" {
             include *
             animation {
                
+            }
+            autoLayout
+        }
+        
+        deployment trasoftwareSystem "Infrastructure High Level Deployment" "TRADeployment" {
+            include *
+            animation {
+                
             }
             autoLayout
         }
