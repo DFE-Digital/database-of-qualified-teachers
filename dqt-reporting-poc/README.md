@@ -2,7 +2,39 @@
 
 This folder houses the code for a working proof-of-concept that synchornises data between the DQT (build) and an instance of Azure SQL - so that reporting users can query DQT data using traditional SQL.
 
-## TLDR; Local set up
+## Technical Spikes
+
+1. Direct SQL Access: SQL Tools Access spike to D365 using Tabular Data Stream endpoints.
+2. Creation of a copy database: SQL Tools access to a copy of D365 data created in a SQLServer via a function app and an Azure Service Bus by consuming D365 events.
+
+
+# Direct SQL Access technical spike
+
+[Tabular Data Stream Endpoints](https://powerapps.microsoft.com/en-us/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/) expose the common data service for power apps, MS Dynamics being one of them. Can we use this to provide quick read only access to the DQT data?
+
+We would need to limit this to internal staff, remove access to any none sensitive data, and authenticate using Active Directory (TBC). 
+
+
+[Connecting to the MS dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query)
+
+Currently only SQLServer management tools supports dataverse connections, and this is only supported on Windows OS. There are a number of 3rd party intermediaries that do provide connectors but the [one](https://skyvia.com/security) used in this spike is hosted in US and therefore is not compatible with our AD / Azure configuration as it causes users to be locked out as a potential threat.
+
+
+Navigate to your [powerplatform environment](https://admin.powerplatform.microsoft.com/) and enable TDS Endpoints in the power apps:
+
+![Enable TDS endpoint](./images/tds.jpg)
+
+## Mac Users
+
+Not supported. For DfE users, it may be possible to create a [Dev Box Service to host a Windows OS to install MS SQLSVR Managment tools (then follow instructions below)](https://learn.microsoft.com/en-us/azure/dev-box/overview-what-is-microsoft-dev-box)
+
+## Windows users
+
+Install MS SQL Server management tools [and connect to the required dataverse](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query). 
+
+# Copy database using D365 events technical spike
+
+### TLDR; Local set up
 
 ### Prerequisites
 * [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
@@ -60,9 +92,6 @@ Currently, the Microsoft Data Export Service connects directly to an Azure SQL d
 An overview of the DES system, and how to combat synchronisation issues can be found [here](https://docs.microsoft.com/en-us/power-platform/admin/replicate-data-microsoft-azure-sql-database)
 
 The DES creates the initial data copy, and then dispatches queries to the SQL database to deal with the subsequent changes to entities.
-
-![Reporting Architecture Overview - As-Is](./images/dqt_reporting_as_is2.png)
-
 
 
 ## To-be (Proposed)
