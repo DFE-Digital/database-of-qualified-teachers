@@ -1,5 +1,11 @@
 workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
 
+    ## *************************************************************************************************************************************************************
+    ## To install structurizr see: https://structurizr.com/help/getting-started
+    ## docker run -it --rm -p 8080:8080 -v [PATH TO workspace.dsl]:/usr/local/structurizr structurizr/lite
+    ## *******************************************************************
+    ##  NON - SENSITIVE
+
     model {
             # **********software system users**********
             
@@ -9,6 +15,7 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             
             # citizens etc.
             citizen = person "Citizen" "Anybody who neeeds to use the TRA's public Gov.Uk services"
+            nonukcitizen = person "Non Uk Citizen" "None UK citizen who neeeds to use the TRA's public Gov.Uk services"
             
             # known portal user types
             qualifiedteacher = person "Qualified Teacher" "Newly Qualified and Fully Qualified Teachers"
@@ -30,7 +37,7 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             dsi = softwaresystem "DSI" "DfE Sign In IDAM" "https,Oauth"
             
             # legacy file integrations 
-            hesa = softwaresystem "Hesa" "HESA file integration" "sftp"
+            
             capitatps = softwaresystem "Capita TPS" "Teacher Pensions file integration" "sftp"
             gias = softwaresystem "GIAS" "Get Information About Schools file integration" "sftp"
             gtc = softwaresystem "GTC" "Welsh General Teaching Council file integration" "sftp"
@@ -56,6 +63,29 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     this -> qualifiedteachersapi "uses"
                     findrubyonrailsmonolith = component "find-a-lost-trn Monolith" "Find a lost TRN is a monolithic Rails app built with the GOVUK Design System and hosted on GOVUK PaaS." "Ruby 3.x,Node.js 16.x,Yarn 1.22.x,PostgreSQL 13.x,Redis 6.x"
                     findrubyonrailsmonolith -> qualifiedteachersapi "https"
+                    findsidekiqworker = component "SideKiq Worker" "Sidekiq is a job scheduler. The worker instances pick up jobs from the Redis Cache"
+                    findrediscache = component "Redis Cache" "Redis is a database & memory cache"
+                    findpostgres = component "PostgreSQL" "PostgreSQL database for storing service data"
+                    
+                    findrubyonrailsmonolith -> findrediscache "Write Operations"
+                    findsidekiqworker -> findrediscache "Reads and Delete Operations"
+                    findrubyonrailsmonolith -> findpostgres "CRUD operations"
+                    findsidekiqworker -> findpostgres "CRUD operations"
+                }
+                
+                applyqtscont = container "Apply For QTS Gov.Uk Web Application" "https://apply-for-qts-in-england.education.gov.uk/eligibility/start" "Ruby on Rails" {
+                    # find a lost trn users
+                    nonukcitizen -> this "https"
+                    this -> qualifiedteachersapi "uses"
+                    applyqtsrubyonrailsmonolith = component "apply-for-qts Monolith" "Apply for QTS is a monolithic Rails app built with the GOVUK Design System and hosted on GOVUK PaaS." "Ruby 3.x,Node.js 16.x,Yarn 1.22.x,PostgreSQL 13.x,Redis 6.x"
+                    applyqtsrubyonrailsmonolith -> qualifiedteachersapi "Post/Put/Get"
+                    applysidekiqworker = component "SideKiq Worker" "Sidekiq is a job scheduler. The worker instances pick up jobs from the Redis Cache"
+                    applyrediscache = component "Redis Cache" "Redis is a database & memory cache"
+                    applyqtsrubyonrailsmonolith -> applyrediscache "Write Operations"
+                    applysidekiqworker -> applyrediscache "Reads and Delete Operations"
+                    applypostgres = component "PostgreSQL" "PostgreSQL database for storing service data"
+                    applyqtsrubyonrailsmonolith -> applypostgres "CRUD operations"
+                    applysidekiqworker -> applypostgres "CRUD operations"
                 }
                 
                 d365cont = container "DQT CRM" "DQT D365 SAAS Service" "SAAS"{
@@ -99,7 +129,7 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     claim -> qualifiedteachersapi "uses"
                     cpd -> qualifiedteachersapi "uses"
                     
-                    hesa -> sftpapp "reads/writes from/to"
+                    
                     capitatps -> sftpapp "reads/writes from/to"
                     gias -> sftpapp "reads/writes from/to"
                     gtc -> sftpapp "reads/writes from/to"
@@ -114,7 +144,7 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                 qualifiedteachersapi -> dqtcrm "reads/writes from/to"
                 keyvault -> qualifiedteachersapicont "stores secrets"
                 keyvault -> findcont "stores secrets"
-                
+                keyvault -> applyqtscont "stores secrets"
                 
                 
             # **********system context user relationships**********
@@ -135,8 +165,11 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
         
          deploymentEnvironment "Infrastructure High Level Deployment" {
             deploymentNode "GovPaas" "Gov.Uk Hosting Service managed by GDS (Government Digital Services)" "AWS, CloudFront" {
-                deploymentNode "Gov.Uk Digital Service" "" "Ruby on Rails" {
+                deploymentNode "Find a Lost TRN Gov.Uk Digital Service" "" "Ruby on Rails" {
                     infrafindinstance = containerInstance findcont
+                }
+                deploymentNode "Apply For QTS TRN Gov.Uk Digital Service" "" "Ruby on Rails" {
+                    infraapplyqtsinstance = containerInstance applyqtscont
                 }
                 deploymentNode "API Service" "" ".Net core" {
                     infraapiinstance = containerInstance qualifiedteachersapicont
@@ -144,8 +177,8 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                 
             }
             
-            deploymentNode "Department For Education" "educationgovuk.onmicrosoft.com" "MS Azure T1" {
-                deploymentNode "DQT T1 Components" "" "IAAS VM's.Net 4, SQL,3rd Party Apps, SFTP, SSIS" {
+            deploymentNode "Department For Education Azure Platform" "educationgovuk.onmicrosoft.com" "MS Azure T1" {
+                deploymentNode "DQT Portal .Net4 Components" "" "IAAS VM's.Net 4, SQL,3rd Party Apps, SFTP, SSIS" {
                     infrat1dqtinstance = containerInstance dqtcrmcompcont
                 }
             }
@@ -173,19 +206,25 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
     views {
         systemContext trasoftwareSystem "SystemContext" "Full Context" {
             include *
-            autoLayout 
+            autolayout
         }
         
         systemContext trasoftwareSystem "UserContext" "User Context" {
-            include qualifiedteacher traineeteacher trauser dfesystemuser citizen ittprovider schoolemployer appropriatebody qtsequivelenceteacher noneschoolemployer
-            autoLayout 
+            include nonukcitizen qualifiedteacher traineeteacher trauser dfesystemuser citizen ittprovider schoolemployer appropriatebody qtsequivelenceteacher noneschoolemployer
+             animation {
+                
+            }
+            autolayout
         }
         
         
         container trasoftwareSystem {
             
             include *
-            autolayout 
+            animation {
+                
+            }
+            autolayout
         }
         
         component findcont "findview" {
@@ -193,15 +232,24 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             animation {
                 
             }
-            autoLayout
+            autolayout
+            
         }
         
+         component applyqtscont "applyview" {
+            include *
+            animation {
+                
+            }
+            autolayout
+            
+        }
         component qualifiedteachersapicont "qualapiview" {
             include *
             animation {
                 
             }
-            autoLayout
+            autolayout
         }
         
         component dqtcrmcompcont "crmview" {
@@ -209,7 +257,7 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             animation {
                
             }
-            autoLayout
+         autolayout   
         }
         
         deployment trasoftwareSystem "Infrastructure High Level Deployment" "TRADeployment" {
@@ -217,7 +265,7 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             animation {
                 
             }
-            autoLayout
+            autolayout
         }
         
         styles {

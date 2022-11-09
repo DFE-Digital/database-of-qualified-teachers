@@ -18,3 +18,6 @@ The services and systems include:
 
 * [Find a Lost Teacher Reference Number (TRN)](https://find-a-lost-trn.education.gov.uk/start) is a public facing digital service that allows anyone to find their TRN without calling the Teacher Regulation Agency help desk.
 
+* [Apply For QTS](https://apply-for-qts-in-england.education.gov.uk/eligibility/start) is a public facing digital service that allows Teachers from outside the UK to apply for Qualified Teacher Status (QTS).
+
+
