@@ -114,16 +114,20 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     sqlsvrmt16 = component "SQL Server Management Tools v16" "Client MS SQLServer management tools suite for querying databases" "MSSQL Svr Management Tools v2016 (Pre-Prod)"
                     sqlsvrmt18 = component "SQL Server Management Tools v18" "Client MS SQLServer management tools suite for querying databases" "MSSQL Svr Management Tools v2018 (Prod)"
                     aspwebapp = component "ASP.Net Web Application" "Web application serving https://teacherservices.education.gov.uk/" "ASP.net 4 application hosted on iis"
-                    
+                    dsisync = component "SASyncService DSI -> DQT CRM Data Sync" "IIS hosted WCF component that syncs DSI user and org. data" ".Net 4"
                     
                     # crm component relationships
+                    
+                    dsi -> dsisync "pushes data to"
+                    dsisync -> dqtcrm "pushes data to"
+                
                     
                     msdataexportservice -> crmexportdatabase "exports data to"
                     ssisjobs -> consoleapps "invokes" 
                     consoleapps -> sftpapp "imports/exports files to/from"
                     
-                    sqlsvrmt16 -> crmexportdatabase "reads/writes from/to"
-                    sqlsvrmt18 -> crmexportdatabase "reads/writes from/to"
+                    sqlsvrmt16 -> crmexportdatabase "reads from"
+                    sqlsvrmt18 -> crmexportdatabase "reads from"
                     
                     register -> qualifiedteachersapi "uses"
                     claim -> qualifiedteachersapi "uses"
