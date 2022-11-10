@@ -5,46 +5,50 @@ Views showing the technical architecture of the TRA "Database of Qualified Teach
 [If your browser isn't letting you focus in on the diagrams download the .png files in the repo](https://github.com/DFE-Digital/database-of-qualified-teachers/tree/main/docs/images)
 
 # Systems and Users Context
-This shows the high level view of the TRA "Database of Qualified Teachers" user types and software systems. The technical architecture is currently being transformed from [tightly coupled views over the MS Dynamics CRM](images/structurizr-1-crmview-01-06-22.png) to a set of discreet GDS style Gov.Uk standard services [for example:](images/structurizr-1-findview-01-06-22.png). The [CRM and its coupled components](images/structurizr-1-crmview-01-06-22.png) remain but will be re-purposed and or decommissioned during 2022/2023.
+This shows the high level view of the TRA "Database of Qualified Teachers" user types and software systems. The technical architecture is currently being transformed from tightly coupled views over the MS Dynamics CRMto a set of discreet GDS style Gov.Uk standard services.
 
-![Systems and users view](images/structurizr-1-SystemContext-01-06-22.png)
+![Systems and users view](images/tra-system-context.jpg)
 
 
 # Users Context
 
 This shows who they are and how the user groups interact with the high level architecture.
 
-![Users view](images/structurizr-1-UserContext-01-06-22.png)
+![Users view](images/tra-user-context.jpg)
 
 # Containers View
 
-This breaks down the high level view and shows how the TRA DQT system is currently composed of 3 main containing technical domains. The biggest container being [the CRM and related components](images/structurizr-1-crmview-01-06-22.png). This container will shrink in size as we transform to Gov.Uk aligned digital services. The [Qualified Teachers API container](images/structurizr-1-qualapiview-01-06-22.png) provides a modern (none file based) RESTful API over the TRA data (currently mostly held in the DQT CRM instance). The API will be further developed as we transform from file based data integration to API based integration. The [Find a lost TRN container](images/structurizr-1-findview-01-06-22.png) is the first "new generation" of digital TRA services. Built to GDS service standards using the Gov.Uk design kit, it is an enabling service. Many of DfE's Teacher Services require individuals to enter their Teacher Reference Number (TRN). Research showed us that their was a genuine need to help people [find their TRN](https://find-a-lost-trn.education.gov.uk/start). You can see how its performing [here](https://find-a-lost-trn.education.gov.uk/performance).
+This breaks down the high level view and shows how the TRA DQT system is currently composed of 3 main containing technical domains. The biggest container being the CRM and related components. This container will shrink in size as we transform to Gov.Uk aligned digital services. The DQT/Qualified Teachers API container provides a modern (none file based) RESTful API over the TRA data (currently mostly held in the DQT CRM instance). The API will be further developed as we transform from file based data integration to API based integration. The [Find a lost TRN container](images/tra-components-find.jpg) is a Gov.Uk service for finding a Teacher Reference Number (TRN). Built to GDS service standards using the Gov.Uk design kit, it is an enabling service. Many of DfE's Teacher Services require individuals to enter their Teacher Reference Number (TRN). Research showed us that their was a genuine need to help people [find their TRN](https://find-a-lost-trn.education.gov.uk/start). You can see how its performing [here](https://find-a-lost-trn.education.gov.uk/performance). Apply For QTS is a service that allows Teachers from outside the UK apply for Qualified Teacher Status. It is a Gov.Uk service and is built in the same way as Find a Lost TRN.
 
-![Containers view](images/structurizr-1-TRASoftwareSystem-Container-01-06-22.png)
+![Containers view](images/tra-containers.jpg)
 
 # CRM Components View
 
 This breaks down the CRM and related components, showing how they are currently implemented and integrated. It shows the current file integrations and the external organisations that share data with DQT. 
 
-![CRM and coupled components view](images/structurizr-1-crmview-01-06-22.png)
+![CRM and supporting components view](images/tra-components-crm.jpg)
 
 # Find a lost TRN Components View
 
 This breaks down the find a lost TRN service components, showing how they are currently implemented and integrated. For a more in depth look and to get the source code head over to the [GITHUB repo](https://github.com/DFE-Digital/find-a-lost-trn).
 
-![Find a lost TRN view](images/structurizr-1-findview-01-06-22.png)
+![Find a lost TRN view](images/tra-components-find.jpg)
+
+# Apply For QTS Components View
+
+This breaks down the Apply For QTS components, showing how they are currently implemented and integrated. For a more in depth look and to get the source code head over to the [GITHUB repo](https://github.com/DFE-Digital/apply-for-qualified-teacher-status).
+
+![Apply For QTS view](images/tra-components-apply.jpg)
 
 # Qualified Teachers API Components View
 
-![Qualified Teachers API](images/structurizr-1-qualapiview-01-06-22.png)
+![Qualified Teachers API](images/tra-components-dqt-api.jpg)
 
 This breaks down the qualified teachers API components, showing how they are currently implemented and integrated. For a more in depth look and to get the source code head over to the [GITHUB repo](https://github.com/DFE-Digital/qualified-teachers-api).
 
-# Teacher Services Technical Architecture and DQT
+# Deployment View
 
-This shows a high level view of where the DQT sits in relation to other DfE Teacher Services systems and how data flows to and from those systems and services.
-
-![TRA Architecture](images/ts-architecture.png)
+![Deployment](images/tra-deployment.jpg)
 
 # Technical Architecture Road Map
 All technical architecture changes are fundamentally driven by user needs. We take a user centred design approach. Many of the current services require transformation to meet current service needs and GDS digital standards. While we can't let technology alone drive change we have identified a number of strategic milestones we are aiming to deliver in the next 2 years.
@@ -67,7 +71,7 @@ All technical architecture changes are fundamentally driven by user needs. We ta
 ## Building new services to address user needs
 
 1. Build new [Find a lost TRN Service](). To help users find their Teacher Reference Number quickly and digitally. Done Live May 2022
-2. Build new Professional Recognition digital service. This will replace the existing .Net view "portal" with a fully accessible public [digital service](https://docs.google.com/drawings/d/1S-YDJgEdGv-53tEEfNN9_ivghyPxuDtfrojbK866ns8/edit?skip_itp2_check=true&pli=1) 
+2. Build new Professional Recognition digital service. Done Live November 2022
 
 ## Overall themes
 
