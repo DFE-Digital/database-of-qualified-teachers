@@ -27,7 +27,7 @@ digraph {
   8 [width=1.333333,height=1.333333,fixedsize=true,id=8,label="8: Appropriate Body"]
   9 [width=1.333333,height=1.333333,fixedsize=true,id=9,label="9: None QTS Teacher"]
   20 [width=1.500000,height=1.000000,fixedsize=true,id=20,label="20: TRA Software System"]
-  10 [width=1.333333,height=1.333333,fixedsize=true,id=10,label="10: Employer (None School)"]
+  10 [width=1.333333,height=1.333333,fixedsize=true,id=10,label="10: Employer (Non-School)"]
 
   17 -> 20 [id=72]
   20 -> 15 [id=81]
