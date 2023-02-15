@@ -42,7 +42,7 @@ This breaks down the Apply For QTS components, showing how they are currently im
 
 # Qualified Teachers API Components View
 
-![Qualified Teachers API](images/tra-components-dqt-api.jpg)
+![Qualified Teachers API](images/qualsapicompview.jpg)
 
 This breaks down the qualified teachers API components, showing how they are currently implemented and integrated. For a more in depth look and to get the source code head over to the [GITHUB repo](https://github.com/DFE-Digital/qualified-teachers-api).
 

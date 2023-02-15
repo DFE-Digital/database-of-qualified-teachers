@@ -3,10 +3,11 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
     ## *************************************************************************************************************************************************************
     ## To install structurizr see: https://structurizr.com/help/getting-started
     ## docker run -it --rm -p 8080:8080 -v [PATH TO workspace.dsl]:/usr/local/structurizr structurizr/lite
+     ## suggested workflow 1. use https://structurizr.com/dsl to make changes and test, using local host is slower.
     ## *******************************************************************
     ##  NON - SENSITIVE
 
-    model {
+    model {3
             # **********software system users**********
             
             # internal
@@ -71,6 +72,19 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                     findsidekiqworker -> findrediscache "Reads and Delete Operations"
                     findrubyonrailsmonolith -> findpostgres "CRUD operations"
                     findsidekiqworker -> findpostgres "CRUD operations"
+                }
+                
+                
+                qualscont = container "Teacher Qualifications" "Replacement for Teacher Self Serve & Employer Portal" "Ruby on Rails" {
+                    # Right to teach and Teacher self serve user base
+                    qualifiedteacher -> this "https"
+                    traineeteacher -> this "https"
+                    citizen -> this "https"
+                    this -> qualifiedteachersapi "uses"
+                    rttrubyonrailsmonolith = component "Right To Teach" "Right to teach is a monolithic Rails app built with the GOVUK Design System and hosted on Azure.[TBC]" "Ruby 3.x,Node.js 16.x,Yarn 1.22.x,PostgreSQL 13.x,Redis 6.x"
+                    rttrubyonrailsmonolith -> qualifiedteachersapi "https"
+                    tqualsrubyonrailsmonolith = component "Teacher Qualifications" "Teacher Qualifications is a monolithic Rails app built with the GOVUK Design System and hosted on Azure.[TBC]" "Ruby 3.x,Node.js 16.x,Yarn 1.22.x,PostgreSQL 13.x,Redis 6.x"
+                    tqualsrubyonrailsmonolith -> qualifiedteachersapi "https"
                 }
                 
                 applyqtscont = container "Apply For QTS Gov.Uk Web Application" "https://apply-for-qts-in-england.education.gov.uk/eligibility/start" "Ruby on Rails" {
@@ -248,6 +262,15 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
             autolayout
             
         }
+        component qualscont "qualsview" {
+            include *
+            animation {
+                
+            }
+            autolayout
+            
+        }
+        
         component qualifiedteachersapicont "qualapiview" {
             include *
             animation {
@@ -282,8 +305,12 @@ workspace "Teacher-Regulation-Agency" "Model of the TRA software system" {
                 background #08427b
                 color #ffffff
             }
+            element "Legacy" {
+                background #08427b
+                color #FF0000
+            }
             
         }
     }
     
-}
+}333
