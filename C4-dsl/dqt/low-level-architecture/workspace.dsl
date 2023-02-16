@@ -2,6 +2,7 @@ workspace "TRA" "TRA TQ Unit Deployment Architecture" {
     ## *************************************************************************************************************************************************************
     ## To install structurizr see: https://structurizr.com/help/getting-started
     ## docker run -it --rm -p 8080:8080 -v [PATH TO workspace.dsl]:/usr/local/structurizr structurizr/lite
+    ## suggested workflow 1. use https://structurizr.com/dsl to make changes and test, using local host is slower.
     ## *******************************************************************
     ## ******************************************************************* PRODUCTION ENV VIEW *******************************************************************************
     ##  NON - SENSITIVE
